@@ -1,0 +1,1 @@
+claimCompletionMonthFilter = "SELECT DISTINCT claim_completion_month_adj from claimsDeepDive;"

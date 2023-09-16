@@ -1,0 +1,2570 @@
+2023-08-03 17:39:58 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-03 17:39:58 [INFO] Running PandasAI with starcoder LLM...
+2023-08-03 17:39:58 [INFO] Prompt ID: b3ad0aa4-da6e-4305-b9ef-0c08b9c3cdc4
+2023-08-03 17:40:04 [INFO] 
+                        Code generated:
+                        ```
+                        df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+                        ```
+                    
+2023-08-03 17:40:04 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-03 17:40:04 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-03 17:40:04 [INFO] Executed in: 5.356378793716431s
+2023-08-03 17:43:50 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-03 17:43:50 [INFO] Running PandasAI with starcoder LLM...
+2023-08-03 17:43:50 [INFO] Prompt ID: e0a3361c-9742-474c-ab8b-b2949541759e
+2023-08-03 17:43:50 [INFO] Using cached response
+2023-08-03 17:43:50 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-03 17:43:50 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-03 17:43:50 [INFO] Executed in: 0.015079498291015625s
+2023-08-03 18:04:17 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-03 18:04:17 [INFO] Running PandasAI with starcoder LLM...
+2023-08-03 18:04:17 [INFO] Prompt ID: 37f4887e-c6ae-4be6-bcfe-4ecd804723ac
+2023-08-03 18:04:17 [INFO] Using cached response
+2023-08-03 18:04:17 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-03 18:04:17 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-03 18:04:17 [INFO] Executed in: 0.013944149017333984s
+2023-08-03 18:06:33 [INFO] Question: In which year claims status was "Denied" maximum time. Check "Claims Status" and "Claim Date" fields
+2023-08-03 18:06:33 [INFO] Running PandasAI with starcoder LLM...
+2023-08-03 18:06:33 [INFO] Prompt ID: e702c965-7a53-4668-8a58-d88bbaef39e6
+2023-08-03 18:06:38 [INFO] 
+                        Code generated:
+                        ```
+                        df.groupby('Claim Date').agg({'Claims Status': 'max'})
+                        ```
+                    
+2023-08-03 18:06:38 [INFO] 
+Code running:
+```
+df.groupby('Claim Date').agg({'Claims Status': 'max'})
+```
+2023-08-03 18:06:38 [INFO] Answer:                         Claims Status
+Claim Date                           
+2022-01-01 00:00:00  Denied Then Paid
+2022-02-01 00:00:00  Denied Then Paid
+2022-03-02 00:00:00  Denied Then Paid
+2022-11-02 00:00:00  Denied Then Paid
+2022-12-02 00:00:00  Denied Then Paid
+2023-02-01 00:00:00  Denied Then Paid
+2023-04-01 00:00:00  Denied Then Paid
+2023-05-01 00:00:00  Denied Then Paid
+2023-08-03 18:06:38 [INFO] Executed in: 5.3407142162323s
+2023-08-03 23:41:06 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-03 23:41:06 [INFO] Running PandasAI with starcoder LLM...
+2023-08-03 23:41:06 [INFO] Prompt ID: 14185012-724b-4941-91da-edf8ccec0648
+2023-08-03 23:41:06 [INFO] Using cached response
+2023-08-03 23:41:06 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-03 23:41:06 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-03 23:41:06 [INFO] Executed in: 0.047975778579711914s
+2023-08-03 23:41:53 [INFO] Question:  How many claims "Denied Then Paid" in "NY"
+2023-08-03 23:41:53 [INFO] Running PandasAI with starcoder LLM...
+2023-08-03 23:41:53 [INFO] Prompt ID: 8aa690d7-7530-458e-aad6-020e9536d4db
+2023-08-03 23:42:00 [INFO] 
+                        Code generated:
+                        ```
+                        df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+                        ```
+                    
+2023-08-03 23:42:00 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-03 23:42:00 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-03 23:42:00 [INFO] Executed in: 7.109786748886108s
+2023-08-03 23:43:23 [INFO] Question:  In which year claims status was "Denied" maximum time. Check "Claims Status" and "Claim Date" fields
+2023-08-03 23:43:23 [INFO] Running PandasAI with starcoder LLM...
+2023-08-03 23:43:23 [INFO] Prompt ID: 6a3d4a01-03b9-4269-bd41-7b58169baa23
+2023-08-03 23:43:33 [INFO] 
+                        Code generated:
+                        ```
+                        df.groupby('Claim Date').agg({'Claims Status': 'count'}).sort_values(by='Claims Status', ascending=False).head(1)
+                        ```
+                    
+2023-08-03 23:43:33 [INFO] 
+Code running:
+```
+df.groupby('Claim Date').agg({'Claims Status': 'count'}).sort_values(by='Claims Status', ascending=False).head(1)
+```
+2023-08-03 23:43:33 [INFO] Answer:                      Claims Status
+Claim Date                        
+2022-02-01 00:00:00             12
+2023-08-03 23:43:33 [INFO] Executed in: 9.93217158317566s
+2023-08-04 12:05:55 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-04 12:05:55 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 12:05:55 [INFO] Prompt ID: 5622299e-85d4-4bf4-b1b3-dcd5cd5c6b39
+2023-08-04 12:05:55 [INFO] Using cached response
+2023-08-04 12:05:55 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 12:05:55 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 12:05:55 [INFO] Executed in: 0.015944719314575195s
+2023-08-04 16:41:48 [INFO] Question: "Denied Then Paid" in "NY"
+2023-08-04 16:41:48 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 16:41:48 [INFO] Prompt ID: ec710fd6-d80f-4c3a-a98c-904211c2ab34
+2023-08-04 16:41:58 [INFO] 
+                        Code generated:
+                        ```
+                        df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied') & (df['Reason'] == 'Not covered') & (df['Claim Date'] > df['Service Dates From Date']) & (df['Claim Date'] < df['Service Dates Through Date'])]
+                        ```
+                    
+2023-08-04 16:41:58 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied') & (df['Reason'] == 'Not covered') & (df['Claim Date'] > df['Service Dates From Date']) & (df['Claim Date'] < df['Service Dates Through Date'])]
+```
+2023-08-04 16:41:58 [INFO] Answer: Empty DataFrame
+Columns: [Member Market, Claims Status, Reason, Claim Date, Deny Code, MemberID, ClaimID, Provider NPI #, Patient First Name, Patient Last Name, Patient Date of Birth, Service Dates From Date, Service Dates Through Date, HCID]
+Index: []
+2023-08-04 16:41:58 [INFO] Executed in: 9.443899631500244s
+2023-08-04 16:43:11 [INFO] Question: "Denied Then Paid" claims status in "NY"
+2023-08-04 16:43:11 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 16:43:11 [INFO] Prompt ID: 1574d681-310e-47f8-b74b-21361c6a761c
+2023-08-04 16:45:08 [INFO] Question: Claims Status "Denied Then Paid" in "NY"
+2023-08-04 16:45:08 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 16:45:08 [INFO] Prompt ID: a7517995-458f-49d2-8c9b-9d70e3f0a47f
+2023-08-04 16:45:13 [INFO] 
+                        Code generated:
+                        ```
+                        df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+                        ```
+                    
+2023-08-04 16:45:13 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 16:45:13 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 16:45:13 [INFO] Executed in: 4.875138759613037s
+2023-08-04 18:58:50 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-04 18:58:50 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 18:58:50 [INFO] Prompt ID: f090e687-1249-4ae5-b5a6-6ace58006fbe
+2023-08-04 18:58:55 [INFO] 
+                        Code generated:
+                        ```
+                        df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+                        ```
+                    
+2023-08-04 18:58:55 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-04 18:58:55 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-04 18:58:55 [INFO] Executed in: 5.516512632369995s
+2023-08-04 18:58:55 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-04 18:58:55 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 18:58:55 [INFO] Prompt ID: a4c9c383-320d-4161-bcc9-29297db4541d
+2023-08-04 18:58:55 [INFO] Using cached response
+2023-08-04 18:58:55 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-04 18:58:55 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-04 18:58:55 [INFO] Executed in: 0.007973194122314453s
+2023-08-04 18:59:48 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-04 18:59:48 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 18:59:48 [INFO] Prompt ID: 5ef905d6-084d-4b99-ab78-7fbe17ce4b0a
+2023-08-04 18:59:48 [INFO] Using cached response
+2023-08-04 18:59:48 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 18:59:48 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 18:59:48 [INFO] Executed in: 0.012012481689453125s
+2023-08-04 18:59:48 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-04 18:59:48 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 18:59:48 [INFO] Prompt ID: acd5a800-d386-493b-b329-313b66debd17
+2023-08-04 18:59:48 [INFO] Using cached response
+2023-08-04 18:59:48 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 18:59:48 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 18:59:48 [INFO] Executed in: 0.007720947265625s
+2023-08-04 19:00:03 [INFO] Question: Claims Status "Denied Then Paid" in "NY"
+2023-08-04 19:00:03 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:00:03 [INFO] Prompt ID: 72fd1886-058f-46b0-b456-fffd66d01008
+2023-08-04 19:00:03 [INFO] Using cached response
+2023-08-04 19:00:03 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 19:00:03 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 19:00:03 [INFO] Executed in: 0.014949798583984375s
+2023-08-04 19:00:03 [INFO] Question: Claims Status "Denied Then Paid" in "NY"
+2023-08-04 19:00:03 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:00:03 [INFO] Prompt ID: d3072850-d2ba-458e-98e9-71a83b83c857
+2023-08-04 19:00:03 [INFO] Using cached response
+2023-08-04 19:00:03 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 19:00:03 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 19:00:03 [INFO] Executed in: 0.012956857681274414s
+2023-08-04 19:00:18 [INFO] Question: "Denied Then Paid" Claims Status  in "NY"
+2023-08-04 19:00:18 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:00:18 [INFO] Prompt ID: 053f63a7-da06-4bcf-b69e-412cea3be512
+2023-08-04 19:00:29 [INFO] 
+                        Code generated:
+                        ```
+                        df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied') & (df['Reason'] == 'Not covered') & (df['Claim Date'] > df['Service Dates From Date']) & (df['Claim Date'] < df['Service Dates Through Date'])]
+                        ```
+                    
+2023-08-04 19:00:29 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied') & (df['Reason'] == 'Not covered') & (df['Claim Date'] > df['Service Dates From Date']) & (df['Claim Date'] < df['Service Dates Through Date'])]
+```
+2023-08-04 19:00:29 [INFO] Answer: Empty DataFrame
+Columns: [Member Market, Claims Status, Reason, Claim Date, Deny Code, MemberID, ClaimID, Provider NPI #, Patient First Name, Patient Last Name, Patient Date of Birth, Service Dates From Date, Service Dates Through Date, HCID]
+Index: []
+2023-08-04 19:00:29 [INFO] Executed in: 10.81793999671936s
+2023-08-04 19:00:29 [INFO] Question: "Denied Then Paid" Claims Status  in "NY"
+2023-08-04 19:00:29 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:00:29 [INFO] Prompt ID: 5f1514d3-bdc5-40da-8369-9c176664f9d2
+2023-08-04 19:00:29 [INFO] Using cached response
+2023-08-04 19:00:29 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied') & (df['Reason'] == 'Not covered') & (df['Claim Date'] > df['Service Dates From Date']) & (df['Claim Date'] < df['Service Dates Through Date'])]
+```
+2023-08-04 19:00:29 [INFO] Answer: Empty DataFrame
+Columns: [Member Market, Claims Status, Reason, Claim Date, Deny Code, MemberID, ClaimID, Provider NPI #, Patient First Name, Patient Last Name, Patient Date of Birth, Service Dates From Date, Service Dates Through Date, HCID]
+Index: []
+2023-08-04 19:00:29 [INFO] Executed in: 0.011959552764892578s
+2023-08-04 19:01:05 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason
+2023-08-04 19:01:05 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:01:05 [INFO] Prompt ID: a317b9a0-59e3-4c88-9871-15b051f4a61c
+2023-08-04 19:01:07 [INFO] 
+                        Code generated:
+                        ```
+                        df
+                        ```
+                    
+2023-08-04 19:01:07 [INFO] 
+Code running:
+```
+df
+```
+2023-08-04 19:01:07 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+0             CO            Denied    Missing Doc  ...                 40123.0                    40123.0    556Y06484
+1             CO            Denied    Not covered  ...                 40223.0                    40223.0    556Y06484
+2             CA            Denied    Not covered  ...                 10123.0                    10123.0    134W01515
+3             CA            Denied    Not covered  ...                 20223.0                    20223.0    034Y21005
+4             CA            Denied    Not covered  ...                 20223.0                    10270.0    520Y21009
+5             CA            Denied    Not covered  ...                 20223.0                    20223.0    035Y21005
+6             OH            Denied    Missing Doc  ...                 10123.0                    10123.0    930W13702
+7             NY            Denied    Missing Doc  ...                     nan                        nan    291W13698
+8             NY            Denied    Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY            Denied    Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY            Denied    Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+11            NV            Denied    Missing Doc  ...                 10123.0                    10123.0    299W00308
+12            OH            Denied    Missing Doc  ...                 30123.0                    30123.0    926W13702
+13            OH            Denied    Missing Doc  ...                 40123.0                    40123.0    932W13702
+14            OH            Denied    Missing Doc  ...                 50123.0                    50123.0    255W13698
+15            CO          Approved            nan  ...                 40123.0                    40123.0    556Y06484
+16            CO          Approved            nan  ...                 40223.0                    40223.0    556Y06484
+17            CA          Approved            nan  ...                 10123.0                    10123.0    134W01515
+18            CA          Approved            nan  ...                 20223.0                    20223.0    034Y21005
+19            CA          Approved            nan  ...                 20223.0                    10270.0    520Y21009
+20            CA          Approved            nan  ...                 20223.0                    20223.0    035Y21005
+21            OH          Approved            nan  ...                 10123.0                    10123.0    930W13702
+22            NY          Approved            nan  ...                     nan                        nan    291W13698
+23            NY          Approved            nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY          Approved            nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY          Approved            nan  ...                 11323.0                    11323.0  \n963I00117
+26            NV          Approved            nan  ...                 10123.0                    10123.0    299W00308
+27            OH          Approved            nan  ...                 30123.0                    30123.0    926W13702
+28            OH          Approved            nan  ...                 40123.0                    40123.0    932W13702
+29            OH          Approved            nan  ...                 50123.0                    50123.0    255W13698
+30            CO  Denied Then Paid  No Prior Auth  ...                 40123.0                    40123.0    556Y06484
+31            CO  Denied Then Paid  No Prior Auth  ...                 40223.0                    40223.0    556Y06484
+32            CA  Denied Then Paid  No Prior Auth  ...                 10123.0                    10123.0    134W01515
+33            CA  Denied Then Paid  No Prior Auth  ...                 20223.0                    20223.0    034Y21005
+34            CA  Denied Then Paid  No Prior Auth  ...                 20223.0                    10270.0    520Y21009
+35            CA  Denied Then Paid  No Prior Auth  ...                 20223.0                    20223.0    035Y21005
+36            OH  Denied Then Paid  No Prior Auth  ...                 10123.0                    10123.0    930W13702
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+41            NV  Denied Then Paid  No Prior Auth  ...                 10123.0                    10123.0    299W00308
+42            OH  Denied Then Paid    Missing Doc  ...                 30123.0                    30123.0    926W13702
+43            OH  Denied Then Paid    Missing Doc  ...                 40123.0                    40123.0    932W13702
+44            OH  Denied Then Paid    Missing Doc  ...                 50123.0                    50123.0    255W13698
+
+[45 rows x 14 columns]
+2023-08-04 19:01:07 [INFO] Executed in: 2.075669765472412s
+2023-08-04 19:01:07 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason
+2023-08-04 19:01:07 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:01:07 [INFO] Prompt ID: 15cc8695-5e6c-41ff-9cd6-ad944759eb34
+2023-08-04 19:01:07 [INFO] Using cached response
+2023-08-04 19:01:07 [INFO] 
+Code running:
+```
+df
+```
+2023-08-04 19:01:07 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+0             CO            Denied    Missing Doc  ...                 40123.0                    40123.0    556Y06484
+1             CO            Denied    Not covered  ...                 40223.0                    40223.0    556Y06484
+2             CA            Denied    Not covered  ...                 10123.0                    10123.0    134W01515
+3             CA            Denied    Not covered  ...                 20223.0                    20223.0    034Y21005
+4             CA            Denied    Not covered  ...                 20223.0                    10270.0    520Y21009
+5             CA            Denied    Not covered  ...                 20223.0                    20223.0    035Y21005
+6             OH            Denied    Missing Doc  ...                 10123.0                    10123.0    930W13702
+7             NY            Denied    Missing Doc  ...                     nan                        nan    291W13698
+8             NY            Denied    Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY            Denied    Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY            Denied    Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+11            NV            Denied    Missing Doc  ...                 10123.0                    10123.0    299W00308
+12            OH            Denied    Missing Doc  ...                 30123.0                    30123.0    926W13702
+13            OH            Denied    Missing Doc  ...                 40123.0                    40123.0    932W13702
+14            OH            Denied    Missing Doc  ...                 50123.0                    50123.0    255W13698
+15            CO          Approved            nan  ...                 40123.0                    40123.0    556Y06484
+16            CO          Approved            nan  ...                 40223.0                    40223.0    556Y06484
+17            CA          Approved            nan  ...                 10123.0                    10123.0    134W01515
+18            CA          Approved            nan  ...                 20223.0                    20223.0    034Y21005
+19            CA          Approved            nan  ...                 20223.0                    10270.0    520Y21009
+20            CA          Approved            nan  ...                 20223.0                    20223.0    035Y21005
+21            OH          Approved            nan  ...                 10123.0                    10123.0    930W13702
+22            NY          Approved            nan  ...                     nan                        nan    291W13698
+23            NY          Approved            nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY          Approved            nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY          Approved            nan  ...                 11323.0                    11323.0  \n963I00117
+26            NV          Approved            nan  ...                 10123.0                    10123.0    299W00308
+27            OH          Approved            nan  ...                 30123.0                    30123.0    926W13702
+28            OH          Approved            nan  ...                 40123.0                    40123.0    932W13702
+29            OH          Approved            nan  ...                 50123.0                    50123.0    255W13698
+30            CO  Denied Then Paid  No Prior Auth  ...                 40123.0                    40123.0    556Y06484
+31            CO  Denied Then Paid  No Prior Auth  ...                 40223.0                    40223.0    556Y06484
+32            CA  Denied Then Paid  No Prior Auth  ...                 10123.0                    10123.0    134W01515
+33            CA  Denied Then Paid  No Prior Auth  ...                 20223.0                    20223.0    034Y21005
+34            CA  Denied Then Paid  No Prior Auth  ...                 20223.0                    10270.0    520Y21009
+35            CA  Denied Then Paid  No Prior Auth  ...                 20223.0                    20223.0    035Y21005
+36            OH  Denied Then Paid  No Prior Auth  ...                 10123.0                    10123.0    930W13702
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+41            NV  Denied Then Paid  No Prior Auth  ...                 10123.0                    10123.0    299W00308
+42            OH  Denied Then Paid    Missing Doc  ...                 30123.0                    30123.0    926W13702
+43            OH  Denied Then Paid    Missing Doc  ...                 40123.0                    40123.0    932W13702
+44            OH  Denied Then Paid    Missing Doc  ...                 50123.0                    50123.0    255W13698
+
+[45 rows x 14 columns]
+2023-08-04 19:01:07 [INFO] Executed in: 0.012932538986206055s
+2023-08-04 19:03:17 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-04 19:03:17 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:03:17 [INFO] Prompt ID: ae3ecdaa-32aa-48fe-be93-e29bea07f9ef
+2023-08-04 19:03:22 [INFO] 
+                        Code generated:
+                        ```
+                        df.groupby(['Reason','Claims Status']).size()
+                        ```
+                    
+2023-08-04 19:03:22 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-04 19:03:22 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-04 19:03:22 [INFO] Executed in: 4.904423713684082s
+2023-08-04 19:03:22 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-04 19:03:22 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:03:22 [INFO] Prompt ID: 29542e1a-5f3c-4843-a525-ae0a27cf0205
+2023-08-04 19:03:22 [INFO] Using cached response
+2023-08-04 19:03:22 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-04 19:03:22 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-04 19:03:22 [INFO] Executed in: 0.00819253921508789s
+2023-08-04 19:09:32 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:09:32 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:09:32 [INFO] Prompt ID: 1ca0d8e5-4331-4ea9-884d-08e24a4efd9c
+2023-08-04 19:09:34 [INFO] 
+                        Code generated:
+                        ```
+                        df.Reason.value_counts()
+                        ```
+                    
+2023-08-04 19:09:34 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:09:34 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:09:34 [INFO] Executed in: 2.417862892150879s
+2023-08-04 19:09:34 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:09:34 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:09:34 [INFO] Prompt ID: ee705c9a-873d-4870-9108-d9016cc67189
+2023-08-04 19:09:34 [INFO] Using cached response
+2023-08-04 19:09:34 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:09:34 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:09:34 [INFO] Executed in: 0.009867429733276367s
+2023-08-04 19:19:41 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:19:41 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:19:41 [INFO] Prompt ID: fba25894-4238-487e-a9c9-5fcb80b65784
+2023-08-04 19:19:41 [INFO] Using cached response
+2023-08-04 19:19:41 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:19:41 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:19:41 [INFO] Executed in: 0.003986358642578125s
+2023-08-04 19:19:41 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:19:41 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:19:41 [INFO] Prompt ID: 7e046b32-12c3-48a6-9c06-4df3c1d04830
+2023-08-04 19:19:41 [INFO] Using cached response
+2023-08-04 19:19:41 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:19:41 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:19:41 [INFO] Executed in: 0.002716541290283203s
+2023-08-04 19:25:38 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:25:38 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:25:38 [INFO] Prompt ID: 436f0fd9-79e4-4b84-a77e-00fbe4b7911c
+2023-08-04 19:25:38 [INFO] Using cached response
+2023-08-04 19:25:38 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:25:38 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:25:38 [INFO] Executed in: 0.003986358642578125s
+2023-08-04 19:25:38 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:25:38 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:25:38 [INFO] Prompt ID: 05b8eff9-2b98-4515-ac4e-05694980105c
+2023-08-04 19:25:38 [INFO] Using cached response
+2023-08-04 19:25:38 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:25:38 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:25:38 [INFO] Executed in: 0.003987550735473633s
+2023-08-04 19:27:02 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:27:02 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:27:02 [INFO] Prompt ID: 8d1cfeb1-928e-4e9f-8ff8-98bf8f1ea77a
+2023-08-04 19:27:02 [INFO] Using cached response
+2023-08-04 19:27:02 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:27:02 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:27:02 [INFO] Executed in: 0.0029900074005126953s
+2023-08-04 19:27:02 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:27:02 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:27:02 [INFO] Prompt ID: 2b531123-231b-4668-921a-53fed201fcec
+2023-08-04 19:27:02 [INFO] Using cached response
+2023-08-04 19:27:02 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:27:02 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:27:02 [INFO] Executed in: 0.001993894577026367s
+2023-08-04 19:27:27 [INFO] Question: check the Reason for Claims Status is "Denied"
+2023-08-04 19:27:27 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:27:27 [INFO] Prompt ID: 6c0e28d1-db7c-42e1-997b-05e13ee29367
+2023-08-04 19:27:29 [INFO] 
+                        Code generated:
+                        ```
+                        df.Reason == "Denied"
+                        ```
+                    
+2023-08-04 19:27:29 [INFO] 
+Code running:
+```
+df.Reason == 'Denied'
+```
+2023-08-04 19:27:29 [INFO] Answer: 0     False
+1     False
+2     False
+3     False
+4     False
+5     False
+6     False
+7     False
+8     False
+9     False
+10    False
+11    False
+12    False
+13    False
+14    False
+15    False
+16    False
+17    False
+18    False
+19    False
+20    False
+21    False
+22    False
+23    False
+24    False
+25    False
+26    False
+27    False
+28    False
+29    False
+30    False
+31    False
+32    False
+33    False
+34    False
+35    False
+36    False
+37    False
+38    False
+39    False
+40    False
+41    False
+42    False
+43    False
+44    False
+Name: Reason, dtype: bool
+2023-08-04 19:27:29 [INFO] Executed in: 2.922513008117676s
+2023-08-04 19:27:29 [INFO] Question: check the Reason for Claims Status is "Denied"
+2023-08-04 19:27:29 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:27:29 [INFO] Prompt ID: 74165adb-73a7-444e-86c5-39427dc91eee
+2023-08-04 19:27:30 [INFO] Using cached response
+2023-08-04 19:27:30 [INFO] 
+Code running:
+```
+df.Reason == 'Denied'
+```
+2023-08-04 19:27:30 [INFO] Answer: 0     False
+1     False
+2     False
+3     False
+4     False
+5     False
+6     False
+7     False
+8     False
+9     False
+10    False
+11    False
+12    False
+13    False
+14    False
+15    False
+16    False
+17    False
+18    False
+19    False
+20    False
+21    False
+22    False
+23    False
+24    False
+25    False
+26    False
+27    False
+28    False
+29    False
+30    False
+31    False
+32    False
+33    False
+34    False
+35    False
+36    False
+37    False
+38    False
+39    False
+40    False
+41    False
+42    False
+43    False
+44    False
+Name: Reason, dtype: bool
+2023-08-04 19:27:30 [INFO] Executed in: 0.009966373443603516s
+2023-08-04 19:27:50 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-04 19:27:50 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:27:50 [INFO] Prompt ID: ba4d991c-4650-4df9-8473-8fc0ec07b00e
+2023-08-04 19:27:50 [INFO] Using cached response
+2023-08-04 19:27:50 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 19:27:50 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 19:27:50 [INFO] Executed in: 0.01575922966003418s
+2023-08-04 19:27:50 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-04 19:27:50 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:27:50 [INFO] Prompt ID: aded5b1b-4660-49a9-8296-a71b7c317a0a
+2023-08-04 19:27:50 [INFO] Using cached response
+2023-08-04 19:27:50 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 19:27:50 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 19:27:50 [INFO] Executed in: 0.014949560165405273s
+2023-08-04 19:28:07 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-04 19:28:07 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:28:07 [INFO] Prompt ID: 044fbc91-d09c-49d5-90d2-05cbf4d1e379
+2023-08-04 19:28:07 [INFO] Using cached response
+2023-08-04 19:28:07 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-04 19:28:07 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-04 19:28:07 [INFO] Executed in: 0.006048917770385742s
+2023-08-04 19:28:07 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-04 19:28:07 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:28:07 [INFO] Prompt ID: a55b0cd3-0ea5-4c4a-9d6d-1954312ac069
+2023-08-04 19:28:07 [INFO] Using cached response
+2023-08-04 19:28:07 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-04 19:28:07 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-04 19:28:07 [INFO] Executed in: 0.004990577697753906s
+2023-08-04 19:28:19 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-04 19:28:19 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:28:19 [INFO] Prompt ID: f7d9be97-3b11-48ed-9e26-411a2b81c3e0
+2023-08-04 19:28:19 [INFO] Using cached response
+2023-08-04 19:28:19 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-04 19:28:19 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-04 19:28:19 [INFO] Executed in: 0.005972862243652344s
+2023-08-04 19:28:19 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-04 19:28:19 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:28:19 [INFO] Prompt ID: 4cbf77d0-997d-4423-abe8-5244f9a7cd57
+2023-08-04 19:28:19 [INFO] Using cached response
+2023-08-04 19:28:19 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-04 19:28:19 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-04 19:28:19 [INFO] Executed in: 0.003988504409790039s
+2023-08-04 19:28:56 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:28:56 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:28:56 [INFO] Prompt ID: e988043d-b4fc-4a21-a328-d527dbcd48e3
+2023-08-04 19:28:56 [INFO] Using cached response
+2023-08-04 19:28:56 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:28:56 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:28:56 [INFO] Executed in: 0.002989530563354492s
+2023-08-04 19:28:56 [INFO] Question: check the Reason for Claims Status is Denied
+2023-08-04 19:28:56 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:28:56 [INFO] Prompt ID: bfc099fd-a53a-4ce5-9569-7c362b2afc2f
+2023-08-04 19:28:56 [INFO] Using cached response
+2023-08-04 19:28:56 [INFO] 
+Code running:
+```
+df.Reason.value_counts()
+```
+2023-08-04 19:28:56 [INFO] Answer: nan              15
+Missing Doc      13
+No Prior Auth    12
+Not covered       5
+Name: Reason, dtype: int64
+2023-08-04 19:28:56 [INFO] Executed in: 0.002989053726196289s
+2023-08-04 19:29:17 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:29:17 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:29:17 [INFO] Prompt ID: b59877b8-4cfc-4620-be1d-b4ff7b441393
+2023-08-04 19:29:23 [INFO] 
+                        Code generated:
+                        ```
+                        df.groupby(['Reason for Claims Status']).count()
+                        ```
+                    
+2023-08-04 19:29:23 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:29:23 [WARNING] Error executing code (count: 0)
+2023-08-04 19:29:23 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:29:23 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:29:23 [INFO] Prompt ID: 98e03327-eb15-4599-9f39-ea5700360089
+2023-08-04 19:29:23 [INFO] Using cached response
+2023-08-04 19:29:23 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:29:23 [WARNING] Error executing code (count: 0)
+2023-08-04 19:31:08 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:31:08 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:31:08 [INFO] Prompt ID: 47123237-2513-470b-ade9-642b8d1a35c3
+2023-08-04 19:31:08 [INFO] Using cached response
+2023-08-04 19:31:08 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:31:08 [WARNING] Error executing code (count: 0)
+2023-08-04 19:31:13 [WARNING] Error executing code (count: 1)
+2023-08-04 19:31:16 [WARNING] Error executing code (count: 2)
+2023-08-04 19:31:20 [INFO] Answer: 
+2023-08-04 19:31:20 [INFO] Executed in: 11.868344783782959s
+2023-08-04 19:31:20 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:31:20 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:31:20 [INFO] Prompt ID: 472cef41-7f5a-4646-8a8b-1727a75b3f52
+2023-08-04 19:31:20 [INFO] Using cached response
+2023-08-04 19:31:20 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:31:20 [WARNING] Error executing code (count: 0)
+2023-08-04 19:31:23 [WARNING] Error executing code (count: 1)
+2023-08-04 19:31:27 [WARNING] Error executing code (count: 2)
+2023-08-04 19:31:30 [INFO] Answer: 
+2023-08-04 19:31:30 [INFO] Executed in: 10.57539987564087s
+2023-08-04 19:35:03 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:35:03 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:35:03 [INFO] Prompt ID: bf7a3c12-e859-4603-90ea-883625cd3f45
+2023-08-04 19:35:03 [INFO] Using cached response
+2023-08-04 19:35:03 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:35:03 [WARNING] Error executing code (count: 0)
+2023-08-04 19:35:06 [WARNING] Error executing code (count: 1)
+2023-08-04 19:35:10 [WARNING] Error executing code (count: 2)
+2023-08-04 19:35:14 [INFO] Answer: 
+2023-08-04 19:35:14 [INFO] Executed in: 10.94631028175354s
+2023-08-04 19:35:14 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:35:14 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:35:14 [INFO] Prompt ID: 68fce8ad-5296-42c5-8ee0-cbfac782d627
+2023-08-04 19:35:14 [INFO] Using cached response
+2023-08-04 19:35:14 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:35:14 [WARNING] Error executing code (count: 0)
+2023-08-04 19:35:17 [WARNING] Error executing code (count: 1)
+2023-08-04 19:35:21 [WARNING] Error executing code (count: 2)
+2023-08-04 19:35:24 [INFO] Answer: 
+2023-08-04 19:35:24 [INFO] Executed in: 10.546244859695435s
+2023-08-04 19:36:37 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:36:37 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:36:37 [INFO] Prompt ID: 28553001-85f2-43c6-8505-12beb91c1f84
+2023-08-04 19:36:37 [INFO] Using cached response
+2023-08-04 19:36:37 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:36:37 [WARNING] Error executing code (count: 0)
+2023-08-04 19:36:40 [WARNING] Error executing code (count: 1)
+2023-08-04 19:36:45 [WARNING] Error executing code (count: 2)
+2023-08-04 19:36:47 [INFO] Answer: 
+2023-08-04 19:36:47 [INFO] Executed in: 10.664361238479614s
+2023-08-04 19:36:47 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:36:47 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:36:47 [INFO] Prompt ID: ee3a0e04-1e48-47e2-b5e3-1481395300b0
+2023-08-04 19:36:47 [INFO] Using cached response
+2023-08-04 19:36:47 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:36:47 [WARNING] Error executing code (count: 0)
+2023-08-04 19:36:50 [WARNING] Error executing code (count: 1)
+2023-08-04 19:36:53 [WARNING] Error executing code (count: 2)
+2023-08-04 19:36:56 [INFO] Answer: 
+2023-08-04 19:36:56 [INFO] Executed in: 8.702703714370728s
+2023-08-04 19:39:54 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:39:54 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:39:54 [INFO] Prompt ID: 5835ad5f-a8e2-416a-995a-931fd323fade
+2023-08-04 19:39:54 [INFO] Using cached response
+2023-08-04 19:39:54 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:39:54 [WARNING] Error executing code (count: 0)
+2023-08-04 19:39:57 [WARNING] Error executing code (count: 1)
+2023-08-04 19:40:01 [WARNING] Error executing code (count: 2)
+2023-08-04 19:40:05 [INFO] Answer: 
+2023-08-04 19:40:05 [INFO] Executed in: 11.221501111984253s
+2023-08-04 19:40:05 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:40:05 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:40:05 [INFO] Prompt ID: ae70692d-76c7-4a3d-b0e7-30304d8d0643
+2023-08-04 19:40:05 [INFO] Using cached response
+2023-08-04 19:40:05 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:40:05 [WARNING] Error executing code (count: 0)
+2023-08-04 19:40:08 [WARNING] Error executing code (count: 1)
+2023-08-04 19:40:11 [WARNING] Error executing code (count: 2)
+2023-08-04 19:40:14 [INFO] Answer: 
+2023-08-04 19:40:14 [INFO] Executed in: 8.807154178619385s
+2023-08-04 19:41:49 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:41:49 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:41:49 [INFO] Prompt ID: a32ef448-74e1-470e-9ee3-5dcf8ab0aa84
+2023-08-04 19:41:49 [INFO] Using cached response
+2023-08-04 19:41:49 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:41:49 [WARNING] Error executing code (count: 0)
+2023-08-04 19:41:52 [WARNING] Error executing code (count: 1)
+2023-08-04 19:41:55 [WARNING] Error executing code (count: 2)
+2023-08-04 19:41:58 [INFO] Answer: 
+2023-08-04 19:41:58 [INFO] Executed in: 9.716974020004272s
+2023-08-04 19:41:58 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:41:58 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:41:58 [INFO] Prompt ID: 1ed96f98-1b22-4838-ab00-5556d05711d9
+2023-08-04 19:41:58 [INFO] Using cached response
+2023-08-04 19:41:58 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:41:58 [WARNING] Error executing code (count: 0)
+2023-08-04 19:42:01 [WARNING] Error executing code (count: 1)
+2023-08-04 19:42:04 [WARNING] Error executing code (count: 2)
+2023-08-04 19:42:07 [INFO] Answer: 
+2023-08-04 19:42:07 [INFO] Executed in: 8.789740800857544s
+2023-08-04 19:44:28 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:44:28 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:44:28 [INFO] Prompt ID: e45307d0-b95f-457a-a412-08fc364cf7fb
+2023-08-04 19:44:28 [INFO] Using cached response
+2023-08-04 19:44:28 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:44:28 [WARNING] Error executing code (count: 0)
+2023-08-04 19:44:32 [WARNING] Error executing code (count: 1)
+2023-08-04 19:44:35 [WARNING] Error executing code (count: 2)
+2023-08-04 19:44:39 [INFO] Answer: 
+2023-08-04 19:44:39 [INFO] Executed in: 10.43803858757019s
+2023-08-04 19:44:39 [INFO] Question: check the Reason for Claims Status is Denied Then Paid
+2023-08-04 19:44:39 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:44:39 [INFO] Prompt ID: 901f35fe-8994-4fc9-aa75-57c85c4a041f
+2023-08-04 19:44:39 [INFO] Using cached response
+2023-08-04 19:44:39 [INFO] 
+Code running:
+```
+df.groupby(['Reason for Claims Status']).count()
+```
+2023-08-04 19:44:39 [WARNING] Error executing code (count: 0)
+2023-08-04 19:44:42 [WARNING] Error executing code (count: 1)
+2023-08-04 19:44:46 [WARNING] Error executing code (count: 2)
+2023-08-04 19:44:49 [INFO] Answer: 
+2023-08-04 19:44:49 [INFO] Executed in: 10.350094318389893s
+2023-08-04 19:45:23 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-04 19:45:23 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:45:23 [INFO] Prompt ID: abab0951-f498-4802-94fd-b5458c657e3e
+2023-08-04 19:45:28 [INFO] 
+                        Code generated:
+                        ```
+                        df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+                        ```
+                    
+2023-08-04 19:45:28 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-04 19:45:28 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 19:45:28 [INFO] Executed in: 4.737096548080444s
+2023-08-04 19:45:28 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-04 19:45:28 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:45:28 [INFO] Prompt ID: 2c845922-0d9e-44c7-9093-a3a8a74b4d68
+2023-08-04 19:45:28 [INFO] Using cached response
+2023-08-04 19:45:28 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-04 19:45:28 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 19:45:28 [INFO] Executed in: 0.012962818145751953s
+2023-08-04 19:46:14 [INFO] Question: In which year claims status was "Denied" maximum time. Check "Claims Status" and "Claim Date" fields
+2023-08-04 19:46:14 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:46:14 [INFO] Prompt ID: 8328120a-578f-41a8-8351-e2957c645aa6
+2023-08-04 19:46:14 [INFO] Using cached response
+2023-08-04 19:46:14 [INFO] 
+Code running:
+```
+df.groupby('Claim Date').agg({'Claims Status': 'max'})
+```
+2023-08-04 19:46:14 [INFO] Answer:                         Claims Status
+Claim Date                           
+2022-01-01 00:00:00  Denied Then Paid
+2022-02-01 00:00:00  Denied Then Paid
+2022-03-02 00:00:00  Denied Then Paid
+2022-11-02 00:00:00  Denied Then Paid
+2022-12-02 00:00:00  Denied Then Paid
+2023-02-01 00:00:00  Denied Then Paid
+2023-04-01 00:00:00  Denied Then Paid
+2023-05-01 00:00:00  Denied Then Paid
+2023-08-04 19:46:14 [INFO] Executed in: 0.005567312240600586s
+2023-08-04 19:46:14 [INFO] Question: In which year claims status was "Denied" maximum time. Check "Claims Status" and "Claim Date" fields
+2023-08-04 19:46:14 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:46:14 [INFO] Prompt ID: 6e9974b2-fba2-48bd-92bb-8cb7fe3de21e
+2023-08-04 19:46:14 [INFO] Using cached response
+2023-08-04 19:46:14 [INFO] 
+Code running:
+```
+df.groupby('Claim Date').agg({'Claims Status': 'max'})
+```
+2023-08-04 19:46:14 [INFO] Answer:                         Claims Status
+Claim Date                           
+2022-01-01 00:00:00  Denied Then Paid
+2022-02-01 00:00:00  Denied Then Paid
+2022-03-02 00:00:00  Denied Then Paid
+2022-11-02 00:00:00  Denied Then Paid
+2022-12-02 00:00:00  Denied Then Paid
+2023-02-01 00:00:00  Denied Then Paid
+2023-04-01 00:00:00  Denied Then Paid
+2023-05-01 00:00:00  Denied Then Paid
+2023-08-04 19:46:14 [INFO] Executed in: 0.004984378814697266s
+2023-08-04 19:46:29 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-04 19:46:29 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:46:29 [INFO] Prompt ID: 539dd56d-06f4-419b-be06-4a2a97e9fcc2
+2023-08-04 19:46:29 [INFO] Using cached response
+2023-08-04 19:46:29 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-04 19:46:29 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-04 19:46:29 [INFO] Executed in: 0.004029035568237305s
+2023-08-04 19:46:29 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-04 19:46:29 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:46:29 [INFO] Prompt ID: 556090ab-49fc-4578-9ed6-a17c59e59e62
+2023-08-04 19:46:29 [INFO] Using cached response
+2023-08-04 19:46:29 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-04 19:46:29 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-04 19:46:29 [INFO] Executed in: 0.0019953250885009766s
+2023-08-04 19:46:44 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-04 19:46:44 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:46:44 [INFO] Prompt ID: bc8b90c4-1aa3-4532-b510-247dd6fd960e
+2023-08-04 19:46:44 [INFO] Using cached response
+2023-08-04 19:46:44 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-04 19:46:44 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-04 19:46:44 [INFO] Executed in: 0.0060787200927734375s
+2023-08-04 19:46:44 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-04 19:46:44 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 19:46:44 [INFO] Prompt ID: 0acf6c67-d8dc-42f5-b2d4-e601a0eda2bb
+2023-08-04 19:46:44 [INFO] Using cached response
+2023-08-04 19:46:44 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-04 19:46:44 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-04 19:46:44 [INFO] Executed in: 0.003957509994506836s
+2023-08-04 20:08:03 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-04 20:08:03 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:08:03 [INFO] Prompt ID: b61e5e99-fa39-45c6-ae00-b462b07e9be3
+2023-08-04 20:08:03 [INFO] Using cached response
+2023-08-04 20:08:03 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-04 20:08:03 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-04 20:08:03 [INFO] Executed in: 0.002989530563354492s
+2023-08-04 20:08:03 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-04 20:08:03 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:08:03 [INFO] Prompt ID: c588d1b9-dbba-47ed-955c-09afcccd9b90
+2023-08-04 20:08:03 [INFO] Using cached response
+2023-08-04 20:08:03 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-04 20:08:03 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-04 20:08:03 [INFO] Executed in: 0.0019931793212890625s
+2023-08-04 20:08:16 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-04 20:08:16 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:08:16 [INFO] Prompt ID: 99279e0b-c541-4474-8634-fd18d858aa86
+2023-08-04 20:08:16 [INFO] Using cached response
+2023-08-04 20:08:16 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 20:08:16 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 20:08:16 [INFO] Executed in: 0.018261194229125977s
+2023-08-04 20:08:16 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-04 20:08:16 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:08:16 [INFO] Prompt ID: 688bf787-7193-4c29-969e-3153c71c9351
+2023-08-04 20:08:16 [INFO] Using cached response
+2023-08-04 20:08:16 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 20:08:16 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 20:08:16 [INFO] Executed in: 0.012877225875854492s
+2023-08-04 20:08:29 [INFO] Question: Claims Status "Denied Then Paid" in "NY"
+2023-08-04 20:08:29 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:08:29 [INFO] Prompt ID: 2e8720b3-6a95-405f-9473-4743f240e9bc
+2023-08-04 20:08:29 [INFO] Using cached response
+2023-08-04 20:08:29 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 20:08:29 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 20:08:29 [INFO] Executed in: 0.014991044998168945s
+2023-08-04 20:08:29 [INFO] Question: Claims Status "Denied Then Paid" in "NY"
+2023-08-04 20:08:29 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:08:29 [INFO] Prompt ID: 55296a54-3f44-4d0a-bcb4-4035130dfab4
+2023-08-04 20:08:29 [INFO] Using cached response
+2023-08-04 20:08:29 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-04 20:08:29 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-04 20:08:29 [INFO] Executed in: 0.013809919357299805s
+2023-08-04 20:08:35 [INFO] Question: Claims Status "Denied" in "NY"
+2023-08-04 20:08:35 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:08:35 [INFO] Prompt ID: 9a70cbf6-7ad9-4be8-8b5d-207c9948ebc7
+2023-08-04 20:08:41 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['Member Market'] == 'NY']
+                        ```
+                    
+2023-08-04 20:08:41 [INFO] 
+Code running:
+```
+df[df['Member Market'] == 'NY']
+```
+2023-08-04 20:08:41 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY            Denied    Missing Doc  ...                     nan                        nan    291W13698
+8             NY            Denied    Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY            Denied    Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY            Denied    Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+22            NY          Approved            nan  ...                     nan                        nan    291W13698
+23            NY          Approved            nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY          Approved            nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY          Approved            nan  ...                 11323.0                    11323.0  \n963I00117
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[12 rows x 14 columns]
+2023-08-04 20:08:41 [INFO] Executed in: 5.5304114818573s
+2023-08-04 20:08:41 [INFO] Question: Claims Status "Denied" in "NY"
+2023-08-04 20:08:41 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:08:41 [INFO] Prompt ID: 8a3c0da1-df8d-413f-99b0-6d7118ea4174
+2023-08-04 20:08:41 [INFO] Using cached response
+2023-08-04 20:08:41 [INFO] 
+Code running:
+```
+df[df['Member Market'] == 'NY']
+```
+2023-08-04 20:08:41 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY            Denied    Missing Doc  ...                     nan                        nan    291W13698
+8             NY            Denied    Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY            Denied    Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY            Denied    Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+22            NY          Approved            nan  ...                     nan                        nan    291W13698
+23            NY          Approved            nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY          Approved            nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY          Approved            nan  ...                 11323.0                    11323.0  \n963I00117
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[12 rows x 14 columns]
+2023-08-04 20:08:41 [INFO] Executed in: 0.01973724365234375s
+2023-08-04 20:11:54 [INFO] Question: Claims Status "Denied" in "NY"
+2023-08-04 20:11:54 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:11:54 [INFO] Prompt ID: 901d6709-6fea-4971-ae13-331cd58cd574
+2023-08-04 20:11:54 [INFO] Using cached response
+2023-08-04 20:11:54 [INFO] 
+Code running:
+```
+df[df['Member Market'] == 'NY']
+```
+2023-08-04 20:11:54 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY            Denied    Missing Doc  ...                     nan                        nan    291W13698
+8             NY            Denied    Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY            Denied    Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY            Denied    Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+22            NY          Approved            nan  ...                     nan                        nan    291W13698
+23            NY          Approved            nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY          Approved            nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY          Approved            nan  ...                 11323.0                    11323.0  \n963I00117
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[12 rows x 14 columns]
+2023-08-04 20:11:54 [INFO] Executed in: 0.014067411422729492s
+2023-08-04 20:11:54 [INFO] Question: Claims Status "Denied" in "NY"
+2023-08-04 20:11:54 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:11:54 [INFO] Prompt ID: 2b82b30d-4489-4afb-ac99-6b002d09480e
+2023-08-04 20:11:54 [INFO] Using cached response
+2023-08-04 20:11:54 [INFO] 
+Code running:
+```
+df[df['Member Market'] == 'NY']
+```
+2023-08-04 20:11:54 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY            Denied    Missing Doc  ...                     nan                        nan    291W13698
+8             NY            Denied    Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY            Denied    Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY            Denied    Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+22            NY          Approved            nan  ...                     nan                        nan    291W13698
+23            NY          Approved            nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY          Approved            nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY          Approved            nan  ...                 11323.0                    11323.0  \n963I00117
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[12 rows x 14 columns]
+2023-08-04 20:11:54 [INFO] Executed in: 0.012918233871459961s
+2023-08-04 20:12:09 [INFO] Question: Claims Status as "Denied" in "NY"
+2023-08-04 20:12:09 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:12:09 [INFO] Prompt ID: 0979d13b-46ae-47bb-b494-5af1510040d2
+2023-08-04 20:12:14 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['Member Market'] == 'NY']
+                        ```
+                    
+2023-08-04 20:12:14 [INFO] 
+Code running:
+```
+df[df['Member Market'] == 'NY']
+```
+2023-08-04 20:12:14 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY            Denied    Missing Doc  ...                     nan                        nan    291W13698
+8             NY            Denied    Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY            Denied    Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY            Denied    Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+22            NY          Approved            nan  ...                     nan                        nan    291W13698
+23            NY          Approved            nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY          Approved            nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY          Approved            nan  ...                 11323.0                    11323.0  \n963I00117
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[12 rows x 14 columns]
+2023-08-04 20:12:14 [INFO] Executed in: 5.407731533050537s
+2023-08-04 20:12:14 [INFO] Question: Claims Status as "Denied" in "NY"
+2023-08-04 20:12:14 [INFO] Running PandasAI with starcoder LLM...
+2023-08-04 20:12:14 [INFO] Prompt ID: 99ba5bb5-5e50-41ae-90fb-232ea65d59cc
+2023-08-04 20:12:14 [INFO] Using cached response
+2023-08-04 20:12:14 [INFO] 
+Code running:
+```
+df[df['Member Market'] == 'NY']
+```
+2023-08-04 20:12:14 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY            Denied    Missing Doc  ...                     nan                        nan    291W13698
+8             NY            Denied    Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY            Denied    Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY            Denied    Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+22            NY          Approved            nan  ...                     nan                        nan    291W13698
+23            NY          Approved            nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY          Approved            nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY          Approved            nan  ...                 11323.0                    11323.0  \n963I00117
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[12 rows x 14 columns]
+2023-08-04 20:12:14 [INFO] Executed in: 0.019361257553100586s
+2023-08-05 14:56:04 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-05 14:56:04 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:56:04 [INFO] Prompt ID: a8326483-d33f-4830-aae6-9e7a7877d857
+2023-08-05 14:56:04 [INFO] Using cached response
+2023-08-05 14:56:04 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-05 14:56:04 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 14:56:04 [INFO] Executed in: 0.01758885383605957s
+2023-08-05 14:56:04 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-05 14:56:04 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:56:04 [INFO] Prompt ID: bee5d89c-3b14-45e3-973a-1f402c3d0d60
+2023-08-05 14:56:04 [INFO] Using cached response
+2023-08-05 14:56:04 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-05 14:56:04 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 14:56:04 [INFO] Executed in: 0.014215469360351562s
+2023-08-05 14:56:14 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-05 14:56:14 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:56:14 [INFO] Prompt ID: 46e8ff15-67df-4913-8e5d-d6d9a851668b
+2023-08-05 14:56:14 [INFO] Using cached response
+2023-08-05 14:56:14 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-05 14:56:14 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 14:56:14 [INFO] Executed in: 0.014943838119506836s
+2023-08-05 14:56:14 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-05 14:56:14 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:56:14 [INFO] Prompt ID: 34d10fbd-5b44-4fb0-a8b5-74d6daca9847
+2023-08-05 14:56:14 [INFO] Using cached response
+2023-08-05 14:56:14 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-05 14:56:14 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 14:56:14 [INFO] Executed in: 0.014958620071411133s
+2023-08-05 14:56:43 [INFO] Question: In which year claims status was "Denied" maximum time. Check "Claims Status" and "Claim Date" fields
+2023-08-05 14:56:43 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:56:43 [INFO] Prompt ID: db08908c-26ce-4a1d-86f8-d6e2604e538a
+2023-08-05 14:56:43 [INFO] Using cached response
+2023-08-05 14:56:43 [INFO] 
+Code running:
+```
+df.groupby('Claim Date').agg({'Claims Status': 'max'})
+```
+2023-08-05 14:56:43 [INFO] Answer:                         Claims Status
+Claim Date                           
+2022-01-01 00:00:00  Denied Then Paid
+2022-02-01 00:00:00  Denied Then Paid
+2022-03-02 00:00:00  Denied Then Paid
+2022-11-02 00:00:00  Denied Then Paid
+2022-12-02 00:00:00  Denied Then Paid
+2023-02-01 00:00:00  Denied Then Paid
+2023-04-01 00:00:00  Denied Then Paid
+2023-05-01 00:00:00  Denied Then Paid
+2023-08-05 14:56:43 [INFO] Executed in: 0.01075434684753418s
+2023-08-05 14:56:43 [INFO] Question: In which year claims status was "Denied" maximum time. Check "Claims Status" and "Claim Date" fields
+2023-08-05 14:56:43 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:56:43 [INFO] Prompt ID: 6de52537-a026-44bd-9fd4-36ebc4d277e5
+2023-08-05 14:56:43 [INFO] Using cached response
+2023-08-05 14:56:43 [INFO] 
+Code running:
+```
+df.groupby('Claim Date').agg({'Claims Status': 'max'})
+```
+2023-08-05 14:56:43 [INFO] Answer:                         Claims Status
+Claim Date                           
+2022-01-01 00:00:00  Denied Then Paid
+2022-02-01 00:00:00  Denied Then Paid
+2022-03-02 00:00:00  Denied Then Paid
+2022-11-02 00:00:00  Denied Then Paid
+2022-12-02 00:00:00  Denied Then Paid
+2023-02-01 00:00:00  Denied Then Paid
+2023-04-01 00:00:00  Denied Then Paid
+2023-05-01 00:00:00  Denied Then Paid
+2023-08-05 14:56:43 [INFO] Executed in: 0.009929656982421875s
+2023-08-05 14:57:06 [INFO] Question: In which year claims status was "Denied" maximum time.
+2023-08-05 14:57:06 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:57:06 [INFO] Prompt ID: ea54f1b5-6036-434d-b60e-6e6ffdd5a74c
+2023-08-05 14:57:10 [INFO] 
+                        Code generated:
+                        ```
+                        df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+                        ```
+                    
+2023-08-05 14:57:10 [INFO] 
+Code running:
+```
+df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+```
+2023-08-05 14:57:10 [WARNING] Error executing code (count: 0)
+2023-08-05 14:57:10 [INFO] Question: In which year claims status was "Denied" maximum time.
+2023-08-05 14:57:10 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:57:10 [INFO] Prompt ID: fd7e1b5f-bb7e-47a3-aeb4-3baf18d20854
+2023-08-05 14:57:10 [INFO] Using cached response
+2023-08-05 14:57:10 [INFO] 
+Code running:
+```
+df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+```
+2023-08-05 14:57:10 [WARNING] Error executing code (count: 0)
+2023-08-05 14:58:48 [INFO] Question: In which year claims status was "Denied" maximum time.
+2023-08-05 14:58:48 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:58:48 [INFO] Prompt ID: 72324f5e-fa4d-4e01-b4a4-459c8b9a5b7f
+2023-08-05 14:58:48 [INFO] Using cached response
+2023-08-05 14:58:48 [INFO] 
+Code running:
+```
+df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+```
+2023-08-05 14:58:48 [WARNING] Error executing code (count: 0)
+2023-08-05 14:58:52 [WARNING] Error executing code (count: 1)
+2023-08-05 14:58:54 [WARNING] Error executing code (count: 2)
+2023-08-05 14:58:57 [INFO] Answer: 
+2023-08-05 14:58:57 [INFO] Executed in: 8.906767845153809s
+2023-08-05 14:58:57 [INFO] Question: In which year claims status was "Denied" maximum time.
+2023-08-05 14:58:57 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 14:58:57 [INFO] Prompt ID: b1b0f197-acee-4f07-8ff1-2437ca9da847
+2023-08-05 14:58:57 [INFO] Using cached response
+2023-08-05 14:58:57 [INFO] 
+Code running:
+```
+df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+```
+2023-08-05 14:58:57 [WARNING] Error executing code (count: 0)
+2023-08-05 14:58:59 [WARNING] Error executing code (count: 1)
+2023-08-05 14:59:02 [WARNING] Error executing code (count: 2)
+2023-08-05 14:59:05 [INFO] Answer: 
+2023-08-05 14:59:05 [INFO] Executed in: 8.2863130569458s
+2023-08-05 15:04:31 [INFO] Question: In which year claims status was "Denied" maximum time.
+2023-08-05 15:04:31 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:04:31 [INFO] Prompt ID: f1f51a5a-9923-4165-87df-c420ce9541e3
+2023-08-05 15:04:31 [INFO] Using cached response
+2023-08-05 15:04:31 [INFO] 
+Code running:
+```
+df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+```
+2023-08-05 15:04:31 [WARNING] Error executing code (count: 0)
+2023-08-05 15:04:34 [WARNING] Error executing code (count: 1)
+2023-08-05 15:04:37 [WARNING] Error executing code (count: 2)
+2023-08-05 15:04:40 [INFO] Answer: 
+2023-08-05 15:04:40 [INFO] Executed in: 8.848366737365723s
+2023-08-05 15:04:40 [INFO] Question: In which year claims status was "Denied" maximum time.
+2023-08-05 15:04:40 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:04:40 [INFO] Prompt ID: 6848f864-8259-4044-a6a1-d85aef30539b
+2023-08-05 15:04:40 [INFO] Using cached response
+2023-08-05 15:04:40 [INFO] 
+Code running:
+```
+df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+```
+2023-08-05 15:04:40 [WARNING] Error executing code (count: 0)
+2023-08-05 15:04:43 [WARNING] Error executing code (count: 1)
+2023-08-05 15:04:46 [WARNING] Error executing code (count: 2)
+2023-08-05 15:04:49 [INFO] Answer: 
+2023-08-05 15:04:49 [INFO] Executed in: 9.122609853744507s
+2023-08-05 15:11:32 [INFO] Question: In which year claims status was "Denied" maximum time.
+2023-08-05 15:11:32 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:11:32 [INFO] Prompt ID: 81379539-deda-42f3-85cc-82384a7d64e3
+2023-08-05 15:11:32 [INFO] Using cached response
+2023-08-05 15:11:32 [INFO] 
+Code running:
+```
+df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+```
+2023-08-05 15:11:32 [WARNING] Error executing code (count: 0)
+2023-08-05 15:11:36 [WARNING] Error executing code (count: 1)
+2023-08-05 15:11:40 [WARNING] Error executing code (count: 2)
+2023-08-05 15:11:44 [INFO] Answer: 
+2023-08-05 15:11:44 [INFO] Executed in: 12.085939884185791s
+2023-08-05 15:11:44 [INFO] Question: In which year claims status was "Denied" maximum time.
+2023-08-05 15:11:44 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:11:44 [INFO] Prompt ID: ba8993e6-f62c-4429-a336-328b3fd1d397
+2023-08-05 15:11:44 [INFO] Using cached response
+2023-08-05 15:11:44 [INFO] 
+Code running:
+```
+df.groupby('Claim Status').agg({'Claim Date': lambda x: x.dt.year.max()}).reset_index()
+```
+2023-08-05 15:11:44 [WARNING] Error executing code (count: 0)
+2023-08-05 15:11:48 [WARNING] Error executing code (count: 1)
+2023-08-05 15:11:52 [WARNING] Error executing code (count: 2)
+2023-08-05 15:11:56 [INFO] Answer: 
+2023-08-05 15:11:56 [INFO] Executed in: 12.111083269119263s
+2023-08-05 15:12:59 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-05 15:12:59 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:12:59 [INFO] Prompt ID: 3cba34b6-e0c4-40f0-8c2e-54892a5771b5
+2023-08-05 15:12:59 [INFO] Using cached response
+2023-08-05 15:12:59 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-05 15:12:59 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-05 15:12:59 [INFO] Executed in: 0.016021013259887695s
+2023-08-05 15:12:59 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-05 15:12:59 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:12:59 [INFO] Prompt ID: 47757e3d-33d8-4b78-a923-791458f88ff4
+2023-08-05 15:12:59 [INFO] Using cached response
+2023-08-05 15:12:59 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-05 15:12:59 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-05 15:12:59 [INFO] Executed in: 0.007993221282958984s
+2023-08-05 15:28:06 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-05 15:28:06 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:28:06 [INFO] Prompt ID: dfdef2ca-2338-4683-bb38-f14c54e981ff
+2023-08-05 15:28:06 [INFO] Using cached response
+2023-08-05 15:28:06 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-05 15:28:06 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-05 15:28:06 [INFO] Executed in: 0.008002281188964844s
+2023-08-05 15:28:06 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-05 15:28:06 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:28:06 [INFO] Prompt ID: 720dac89-7f9e-4351-bc3d-48d07cfba273
+2023-08-05 15:28:06 [INFO] Using cached response
+2023-08-05 15:28:06 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-05 15:28:06 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-05 15:28:06 [INFO] Executed in: 0.007998943328857422s
+2023-08-05 15:29:35 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-05 15:29:35 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:29:35 [INFO] Prompt ID: 410c017a-ec2b-4007-a3a5-701dc8dd4220
+2023-08-05 15:29:35 [INFO] Using cached response
+2023-08-05 15:29:35 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-05 15:29:35 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-05 15:29:35 [INFO] Executed in: 0.00809788703918457s
+2023-08-05 15:29:35 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-05 15:29:35 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:29:35 [INFO] Prompt ID: f3bd6a59-34f4-498b-98a1-9c38a3487ca8
+2023-08-05 15:29:35 [INFO] Using cached response
+2023-08-05 15:29:35 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-05 15:29:35 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-05 15:29:35 [INFO] Executed in: 0.007929801940917969s
+2023-08-05 15:29:53 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-05 15:29:53 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:29:53 [INFO] Prompt ID: b5719ade-58c1-4ca5-8d1e-345eff4261e6
+2023-08-05 15:29:53 [INFO] Using cached response
+2023-08-05 15:29:53 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-05 15:29:53 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-05 15:29:53 [INFO] Executed in: 0.0030965805053710938s
+2023-08-05 15:29:53 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-05 15:29:53 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:29:53 [INFO] Prompt ID: 8d464b22-1201-49dd-a93b-a0c987215e42
+2023-08-05 15:29:53 [INFO] Using cached response
+2023-08-05 15:29:53 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-05 15:29:53 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-05 15:29:53 [INFO] Executed in: 0.0s
+2023-08-05 15:30:28 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-05 15:30:28 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:30:28 [INFO] Prompt ID: ba6a60d9-12e1-4ffa-9786-8a2c98722260
+2023-08-05 15:30:28 [INFO] Using cached response
+2023-08-05 15:30:28 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-05 15:30:28 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:30:28 [INFO] Executed in: 0.0160675048828125s
+2023-08-05 15:30:28 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-05 15:30:28 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:30:28 [INFO] Prompt ID: a0e40f9b-acc8-4e71-a888-55bd1c950ab6
+2023-08-05 15:30:28 [INFO] Using cached response
+2023-08-05 15:30:28 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-05 15:30:28 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:30:28 [INFO] Executed in: 0.015991687774658203s
+2023-08-05 15:30:39 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-05 15:30:39 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:30:39 [INFO] Prompt ID: 2d145c47-573e-4a71-a103-0e2b2b93be6f
+2023-08-05 15:30:39 [INFO] Using cached response
+2023-08-05 15:30:39 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-05 15:30:39 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:30:39 [INFO] Executed in: 0.02408123016357422s
+2023-08-05 15:30:39 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-05 15:30:39 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:30:39 [INFO] Prompt ID: 8b826b00-f803-47d5-a6b5-c6200751ee91
+2023-08-05 15:30:39 [INFO] Using cached response
+2023-08-05 15:30:39 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-05 15:30:39 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:30:39 [INFO] Executed in: 0.015987396240234375s
+2023-08-05 15:30:48 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:30:48 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:30:48 [INFO] Prompt ID: f56a0d5a-ddbc-4909-9660-4781a6ccc122
+2023-08-05 15:30:54 [INFO] 
+                        Code generated:
+                        ```
+                        df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+                        ```
+                    
+2023-08-05 15:30:54 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:30:54 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:30:54 [INFO] Executed in: 5.603066682815552s
+2023-08-05 15:30:54 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:30:54 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:30:54 [INFO] Prompt ID: 38475c38-f7ce-4132-9e27-3ebe6092b18e
+2023-08-05 15:30:54 [INFO] Using cached response
+2023-08-05 15:30:54 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:30:54 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:30:54 [INFO] Executed in: 0.023989439010620117s
+2023-08-05 15:34:40 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:34:40 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:34:40 [INFO] Prompt ID: 38ec60ae-21c2-4189-88fc-5721e7ea5087
+2023-08-05 15:34:40 [INFO] Using cached response
+2023-08-05 15:34:40 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:34:40 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:34:40 [INFO] Executed in: 0.016000747680664062s
+2023-08-05 15:34:40 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:34:40 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:34:40 [INFO] Prompt ID: 466801e0-1750-4acf-9b48-cc4d46d69d6d
+2023-08-05 15:34:40 [INFO] Using cached response
+2023-08-05 15:34:40 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:34:40 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:34:40 [INFO] Executed in: 0.007992267608642578s
+2023-08-05 15:35:52 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:35:52 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:35:52 [INFO] Prompt ID: b23c9b6e-edef-43e6-a0d7-4d818d3aa7a2
+2023-08-05 15:35:52 [INFO] Using cached response
+2023-08-05 15:35:52 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:35:52 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:35:52 [INFO] Executed in: 0.023988723754882812s
+2023-08-05 15:35:52 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:35:52 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:35:52 [INFO] Prompt ID: 3678aa3c-09f5-4857-94dd-715794ba553e
+2023-08-05 15:35:52 [INFO] Using cached response
+2023-08-05 15:35:52 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:35:52 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:35:52 [INFO] Executed in: 0.007997989654541016s
+2023-08-05 15:37:23 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:37:23 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:37:23 [INFO] Prompt ID: cee10bef-6bdc-42ff-9a3b-b6ec8dbf65b4
+2023-08-05 15:37:23 [INFO] Using cached response
+2023-08-05 15:37:23 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:37:23 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:37:23 [INFO] Executed in: 0.01675724983215332s
+2023-08-05 15:37:23 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:37:23 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:37:23 [INFO] Prompt ID: 0b34d58e-9203-44c9-8067-a96adbddbc6f
+2023-08-05 15:37:23 [INFO] Using cached response
+2023-08-05 15:37:23 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:37:23 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:37:23 [INFO] Executed in: 0.00792837142944336s
+2023-08-05 15:39:18 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:39:18 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:39:18 [INFO] Prompt ID: 9fddc756-6670-4083-966e-c800e761e3be
+2023-08-05 15:39:18 [INFO] Using cached response
+2023-08-05 15:39:18 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:39:18 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:39:18 [INFO] Executed in: 0.015991926193237305s
+2023-08-05 15:39:18 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:39:18 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:39:18 [INFO] Prompt ID: dbdd4819-0cdf-4f6c-938d-9d023ff44c94
+2023-08-05 15:39:18 [INFO] Using cached response
+2023-08-05 15:39:18 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:39:18 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:39:18 [INFO] Executed in: 0.015988826751708984s
+2023-08-05 15:39:46 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:39:46 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:39:46 [INFO] Prompt ID: 9431c9e6-5018-4912-9d4d-06a757d3633e
+2023-08-05 15:39:46 [INFO] Using cached response
+2023-08-05 15:39:46 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:39:46 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:39:46 [INFO] Executed in: 0.015991926193237305s
+2023-08-05 15:39:46 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:39:46 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:39:46 [INFO] Prompt ID: f6b88c2b-1436-45c6-9376-575cf0a91639
+2023-08-05 15:39:46 [INFO] Using cached response
+2023-08-05 15:39:46 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:39:46 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:39:46 [INFO] Executed in: 0.01599574089050293s
+2023-08-05 15:40:12 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:40:12 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:40:12 [INFO] Prompt ID: 2d62d276-0bf4-4a78-95d2-65ef94a074ba
+2023-08-05 15:40:12 [INFO] Using cached response
+2023-08-05 15:40:12 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:40:12 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:40:12 [INFO] Executed in: 0.01599431037902832s
+2023-08-05 15:40:12 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 15:40:12 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 15:40:12 [INFO] Prompt ID: 10ecf8d3-22b7-4d85-9683-1fa0ee7f9ca3
+2023-08-05 15:40:12 [INFO] Using cached response
+2023-08-05 15:40:12 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 15:40:12 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 15:40:12 [INFO] Executed in: 0.016001224517822266s
+2023-08-05 17:04:08 [INFO] Question: how many members are there
+2023-08-05 17:04:08 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:04:08 [INFO] Prompt ID: 8d8dd088-959a-40dc-b617-751517b78075
+2023-08-05 17:04:12 [INFO] 
+                        Code generated:
+                        ```
+                        df.shape[0]
+                        ```
+                    
+2023-08-05 17:04:12 [INFO] 
+Code running:
+```
+df.shape[0]
+```
+2023-08-05 17:04:12 [INFO] Answer: 45
+2023-08-05 17:04:12 [INFO] Executed in: 3.9480206966400146s
+2023-08-05 17:04:12 [INFO] Question: how many members are there
+2023-08-05 17:04:12 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:04:12 [INFO] Prompt ID: f7d4832f-a1b8-4928-971e-2fb3d0d90e38
+2023-08-05 17:04:12 [INFO] Using cached response
+2023-08-05 17:04:12 [INFO] 
+Code running:
+```
+df.shape[0]
+```
+2023-08-05 17:04:12 [INFO] Answer: 45
+2023-08-05 17:04:12 [INFO] Executed in: 0.007893085479736328s
+2023-08-05 17:14:39 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 17:14:39 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:14:39 [INFO] Prompt ID: 83df90a9-d1fb-4447-8926-638ac2949ab7
+2023-08-05 17:14:39 [INFO] Using cached response
+2023-08-05 17:14:39 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 17:14:39 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 17:14:39 [INFO] Executed in: 0.040047645568847656s
+2023-08-05 17:14:39 [INFO] Question: How many claims "Approved" in "NY"
+2023-08-05 17:14:39 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:14:39 [INFO] Prompt ID: a823cf2f-d959-4cab-80c5-8bccd9fd403a
+2023-08-05 17:14:39 [INFO] Using cached response
+2023-08-05 17:14:39 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Approved')]
+```
+2023-08-05 17:14:39 [INFO] Answer:    Member Market Claims Status Reason  ... Service Dates From Date Service Dates Through Date         HCID
+22            NY      Approved    nan  ...                     nan                        nan    291W13698
+23            NY      Approved    nan  ...                 10723.0                    11023.0  \n176T99582
+24            NY      Approved    nan  ...                 11223.0                    11223.0  \n870W02020
+25            NY      Approved    nan  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 17:14:39 [INFO] Executed in: 0.03625202178955078s
+2023-08-05 17:14:48 [INFO] Question: how many members are there
+2023-08-05 17:14:48 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:14:48 [INFO] Prompt ID: e9a753a3-0236-4cb5-b986-677a58d41afd
+2023-08-05 17:14:48 [INFO] Using cached response
+2023-08-05 17:14:48 [INFO] 
+Code running:
+```
+df.shape[0]
+```
+2023-08-05 17:14:48 [INFO] Answer: 45
+2023-08-05 17:14:48 [INFO] Executed in: 0.007997274398803711s
+2023-08-05 17:14:48 [INFO] Question: how many members are there
+2023-08-05 17:14:48 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:14:48 [INFO] Prompt ID: 757c43f6-0c0c-4371-abdc-a832e049e4df
+2023-08-05 17:14:48 [INFO] Using cached response
+2023-08-05 17:14:48 [INFO] 
+Code running:
+```
+df.shape[0]
+```
+2023-08-05 17:14:48 [INFO] Answer: 45
+2023-08-05 17:14:48 [INFO] Executed in: 0.00796198844909668s
+2023-08-05 17:15:09 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-05 17:15:09 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:15:09 [INFO] Prompt ID: 2164cfbf-d86b-4b59-bba2-f44c51287e3e
+2023-08-05 17:15:09 [INFO] Using cached response
+2023-08-05 17:15:09 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-05 17:15:09 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 17:15:09 [INFO] Executed in: 0.04797720909118652s
+2023-08-05 17:15:09 [INFO] Question: How many claims "Denied Then Paid" in "NY"
+2023-08-05 17:15:09 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:15:09 [INFO] Prompt ID: fccba058-ccb2-47b3-ad46-65ae70a76eed
+2023-08-05 17:15:09 [INFO] Using cached response
+2023-08-05 17:15:09 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-05 17:15:09 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 17:15:09 [INFO] Executed in: 0.04798007011413574s
+2023-08-05 17:15:27 [INFO] Question: Claims Status "Denied Then Paid" in "NY"
+2023-08-05 17:15:27 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:15:27 [INFO] Prompt ID: f6f16db9-6cd1-4b77-87b4-92f2a049ecd9
+2023-08-05 17:15:27 [INFO] Using cached response
+2023-08-05 17:15:27 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-05 17:15:27 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 17:15:27 [INFO] Executed in: 0.040009498596191406s
+2023-08-05 17:15:27 [INFO] Question: Claims Status "Denied Then Paid" in "NY"
+2023-08-05 17:15:27 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:15:27 [INFO] Prompt ID: cd611401-e345-437e-9a5d-62c6d27552a0
+2023-08-05 17:15:27 [INFO] Using cached response
+2023-08-05 17:15:27 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied Then Paid')]
+```
+2023-08-05 17:15:28 [INFO] Answer:    Member Market     Claims Status         Reason  ... Service Dates From Date Service Dates Through Date         HCID
+37            NY  Denied Then Paid  No Prior Auth  ...                     nan                        nan    291W13698
+38            NY  Denied Then Paid  No Prior Auth  ...                 10723.0                    11023.0  \n176T99582
+39            NY  Denied Then Paid  No Prior Auth  ...                 11223.0                    11223.0  \n870W02020
+40            NY  Denied Then Paid  No Prior Auth  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 17:15:28 [INFO] Executed in: 0.032999277114868164s
+2023-08-05 17:15:46 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-05 17:15:46 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:15:46 [INFO] Prompt ID: 59127cdf-1ca8-4d0a-bba9-0070f45ca200
+2023-08-05 17:15:46 [INFO] Using cached response
+2023-08-05 17:15:46 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-05 17:15:46 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-05 17:15:46 [INFO] Executed in: 0.01599264144897461s
+2023-08-05 17:15:46 [INFO] Question: check the Reason for Claims Status is Denied. Check the "Claims Status" and "Reason"
+2023-08-05 17:15:46 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:15:46 [INFO] Prompt ID: fe4e7633-3625-49ca-a7aa-8e78413c5cfa
+2023-08-05 17:15:46 [INFO] Using cached response
+2023-08-05 17:15:46 [INFO] 
+Code running:
+```
+df.groupby(['Reason', 'Claims Status']).size()
+```
+2023-08-05 17:15:46 [INFO] Answer: Reason         Claims Status   
+Missing Doc    Denied              10
+               Denied Then Paid     3
+No Prior Auth  Denied Then Paid    12
+Not covered    Denied               5
+nan            Approved            15
+dtype: int64
+2023-08-05 17:15:46 [INFO] Executed in: 0.01595020294189453s
+2023-08-05 17:16:18 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-05 17:16:18 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:16:18 [INFO] Prompt ID: 36d35130-7af3-4efe-84ff-b2beee322d24
+2023-08-05 17:16:18 [INFO] Using cached response
+2023-08-05 17:16:18 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-05 17:16:18 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-05 17:16:18 [INFO] Executed in: 0.008006811141967773s
+2023-08-05 17:16:18 [INFO] Question: What is the Claims Status for MemberID C10000639
+2023-08-05 17:16:18 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:16:18 [INFO] Prompt ID: 6f13a3e0-fcbe-44e5-b0e2-a858886e2368
+2023-08-05 17:16:18 [INFO] Using cached response
+2023-08-05 17:16:18 [INFO] 
+Code running:
+```
+df.loc[df['MemberID'] == 'C10000639', 'Claims Status']
+```
+2023-08-05 17:16:18 [INFO] Answer: 0               Denied
+1               Denied
+15            Approved
+16            Approved
+30    Denied Then Paid
+31    Denied Then Paid
+Name: Claims Status, dtype: object
+2023-08-05 17:16:18 [INFO] Executed in: 0.015947818756103516s
+2023-08-05 17:16:42 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-05 17:16:42 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:16:42 [INFO] Prompt ID: 191dc817-0fdd-434e-8852-c83d305af215
+2023-08-05 17:16:42 [INFO] Using cached response
+2023-08-05 17:16:42 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-05 17:16:42 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 17:16:42 [INFO] Executed in: 0.032019853591918945s
+2023-08-05 17:16:42 [INFO] Question: How many claims "Denied" in "NY"
+2023-08-05 17:16:42 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:16:42 [INFO] Prompt ID: 6dba8552-e938-41a4-a86d-d6ce29767351
+2023-08-05 17:16:42 [INFO] Using cached response
+2023-08-05 17:16:42 [INFO] 
+Code running:
+```
+df.loc[(df['Member Market'] == 'NY') & (df['Claims Status'] == 'Denied')]
+```
+2023-08-05 17:16:42 [INFO] Answer:    Member Market Claims Status       Reason  ... Service Dates From Date Service Dates Through Date         HCID
+7             NY        Denied  Missing Doc  ...                     nan                        nan    291W13698
+8             NY        Denied  Missing Doc  ...                 10723.0                    11023.0  \n176T99582
+9             NY        Denied  Missing Doc  ...                 11223.0                    11223.0  \n870W02020
+10            NY        Denied  Missing Doc  ...                 11323.0                    11323.0  \n963I00117
+
+[4 rows x 14 columns]
+2023-08-05 17:16:42 [INFO] Executed in: 0.03200888633728027s
+2023-08-05 17:18:23 [INFO] Question: How many unique members are there
+2023-08-05 17:18:23 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:18:23 [INFO] Prompt ID: e54c508b-3f0b-417e-a80c-f4a6487cc06f
+2023-08-05 17:18:26 [INFO] 
+                        Code generated:
+                        ```
+                        df.MemberID.nunique()
+                        ```
+                    
+2023-08-05 17:18:26 [INFO] 
+Code running:
+```
+df.MemberID.nunique()
+```
+2023-08-05 17:18:26 [INFO] Answer: 14
+2023-08-05 17:18:26 [INFO] Executed in: 2.630545139312744s
+2023-08-05 17:18:26 [INFO] Question: How many unique members are there
+2023-08-05 17:18:26 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:18:26 [INFO] Prompt ID: d12d7df8-3c20-4d71-865f-45d4fc2f0357
+2023-08-05 17:18:26 [INFO] Using cached response
+2023-08-05 17:18:26 [INFO] 
+Code running:
+```
+df.MemberID.nunique()
+```
+2023-08-05 17:18:26 [INFO] Answer: 14
+2023-08-05 17:18:26 [INFO] Executed in: 0.003946065902709961s
+2023-08-05 17:20:25 [INFO] Question: Which members has maximum Denied claims
+2023-08-05 17:20:25 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:20:25 [INFO] Prompt ID: 711f83df-21d7-48f5-b2be-d6e048f268a4
+2023-08-05 17:20:30 [INFO] 
+                        Code generated:
+                        ```
+                        df.groupby('Member Market')['ClaimID'].count().sort_values(ascending=False).head(1)
+                        ```
+                    
+2023-08-05 17:20:30 [INFO] 
+Code running:
+```
+df.groupby('Member Market')['ClaimID'].count().sort_values(ascending=False).head(1)
+```
+2023-08-05 17:20:30 [INFO] Answer: Member Market
+CA    12
+Name: ClaimID, dtype: int64
+2023-08-05 17:20:30 [INFO] Executed in: 4.957576751708984s
+2023-08-05 17:20:30 [INFO] Question: Which members has maximum Denied claims
+2023-08-05 17:20:30 [INFO] Running PandasAI with starcoder LLM...
+2023-08-05 17:20:30 [INFO] Prompt ID: 6d0dd2e9-62c9-4b61-b37a-858289883275
+2023-08-05 17:20:30 [INFO] Using cached response
+2023-08-05 17:20:30 [INFO] 
+Code running:
+```
+df.groupby('Member Market')['ClaimID'].count().sort_values(ascending=False).head(1)
+```
+2023-08-05 17:20:30 [INFO] Answer: Member Market
+CA    12
+Name: ClaimID, dtype: int64
+2023-08-05 17:20:30 [INFO] Executed in: 0.006028652191162109s
+2023-08-28 21:15:30 [INFO] Question: hi
+2023-08-28 21:15:30 [INFO] Running PandasAI with starcoder LLM...
+2023-08-28 21:15:30 [INFO] Prompt ID: 302aa155-460e-42bf-b64f-d04b499f53e7
+2023-08-28 21:15:32 [INFO] 
+                        Code generated:
+                        ```
+                        df
+                        ```
+                    
+2023-08-28 21:15:32 [INFO] 
+Code running:
+```
+df
+```
+2023-08-28 21:15:32 [INFO] Answer:    Member Market     Claims Status         Reason           Claim Date Deny Code  ... Patient Last Name Patient Date of Birth Service Dates From Date Service Dates Through Date   HCID
+0             CO            Denied    Missing Doc  2022-01-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+1             CO            Denied    Not covered  2022-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+2             CA            Denied    Not covered  2022-02-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+3             CA            Denied    Not covered  2022-03-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+4             CA            Denied    Not covered  2022-07-02 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+5             CA            Denied    Not covered  2022-12-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+6             CA            Denied    Not covered  2023-03-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+7             OH            Denied    Missing Doc  2022-11-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+8             NY            Denied    Missing Doc  2022-11-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+9             NY            Denied    Missing Doc  2023-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+10            NY            Denied    Missing Doc  2023-04-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+11            NY            Denied    Missing Doc  2023-05-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+12            NV            Denied    Missing Doc  2022-01-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+13            OH            Denied    Missing Doc  2022-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+14            OH            Denied    Missing Doc  2022-02-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+15            OH            Denied    Missing Doc  2022-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+16            CO          Approved            nan  2022-03-02 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+17            CO          Approved            nan  2022-12-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+18            CA          Approved            nan  2022-12-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+19            CA          Approved            nan  2022-11-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+20            CA          Approved            nan  2023-04-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+21            OH          Approved            nan  2023-05-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+22            NY          Approved            nan  2022-11-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+23            NY          Approved            nan  2022-07-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+24            NY          Approved            nan  2022-02-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+25            NY          Approved            nan  2023-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+26            NV          Approved            nan  2022-03-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+27            OH          Approved            nan  2022-12-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+28            OH          Approved            nan  2022-11-02 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+29            OH          Approved            nan  2022-11-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+30            CO  Denied Then Paid  No Prior Auth  2023-02-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+31            CO  Denied Then Paid  No Prior Auth  2023-04-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+32            CA  Denied Then Paid  No Prior Auth  2023-05-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+33            CA  Denied Then Paid  No Prior Auth  2023-01-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+34            CA  Denied Then Paid  No Prior Auth  2022-02-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+35            CA  Denied Then Paid  No Prior Auth  2022-07-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+36            OH  Denied Then Paid  No Prior Auth  2022-02-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+37            NY  Denied Then Paid  No Prior Auth  2022-03-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+38            NY  Denied Then Paid  No Prior Auth  2022-07-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+39            NY  Denied Then Paid  No Prior Auth  2022-03-02 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+40            NY  Denied Then Paid  No Prior Auth  2023-02-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+41            NV  Denied Then Paid  No Prior Auth  2023-02-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+42            OH  Denied Then Paid    Missing Doc  2023-04-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+43            OH  Denied Then Paid    Missing Doc  2023-05-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+44            OH  Denied Then Paid    Missing Doc  2023-05-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+45            NY  Denied Then Paid  No Prior Auth  2022-11-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+
+[46 rows x 14 columns]
+2023-08-28 21:15:32 [INFO] Executed in: 2.378373622894287s
+2023-08-28 21:15:32 [INFO] Question: hi
+2023-08-28 21:15:32 [INFO] Running PandasAI with starcoder LLM...
+2023-08-28 21:15:32 [INFO] Prompt ID: 2bb61e1b-4d42-4ac7-967e-d0456f9feefa
+2023-08-28 21:15:32 [INFO] Using cached response
+2023-08-28 21:15:32 [INFO] 
+Code running:
+```
+df
+```
+2023-08-28 21:15:32 [INFO] Answer:    Member Market     Claims Status         Reason           Claim Date Deny Code  ... Patient Last Name Patient Date of Birth Service Dates From Date Service Dates Through Date   HCID
+0             CO            Denied    Missing Doc  2022-01-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+1             CO            Denied    Not covered  2022-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+2             CA            Denied    Not covered  2022-02-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+3             CA            Denied    Not covered  2022-03-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+4             CA            Denied    Not covered  2022-07-02 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+5             CA            Denied    Not covered  2022-12-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+6             CA            Denied    Not covered  2023-03-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+7             OH            Denied    Missing Doc  2022-11-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+8             NY            Denied    Missing Doc  2022-11-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+9             NY            Denied    Missing Doc  2023-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+10            NY            Denied    Missing Doc  2023-04-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+11            NY            Denied    Missing Doc  2023-05-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+12            NV            Denied    Missing Doc  2022-01-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+13            OH            Denied    Missing Doc  2022-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+14            OH            Denied    Missing Doc  2022-02-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+15            OH            Denied    Missing Doc  2022-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+16            CO          Approved            nan  2022-03-02 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+17            CO          Approved            nan  2022-12-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+18            CA          Approved            nan  2022-12-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+19            CA          Approved            nan  2022-11-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+20            CA          Approved            nan  2023-04-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+21            OH          Approved            nan  2023-05-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+22            NY          Approved            nan  2022-11-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+23            NY          Approved            nan  2022-07-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+24            NY          Approved            nan  2022-02-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+25            NY          Approved            nan  2023-02-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+26            NV          Approved            nan  2022-03-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+27            OH          Approved            nan  2022-12-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+28            OH          Approved            nan  2022-11-02 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+29            OH          Approved            nan  2022-11-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+30            CO  Denied Then Paid  No Prior Auth  2023-02-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+31            CO  Denied Then Paid  No Prior Auth  2023-04-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+32            CA  Denied Then Paid  No Prior Auth  2023-05-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+33            CA  Denied Then Paid  No Prior Auth  2023-01-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+34            CA  Denied Then Paid  No Prior Auth  2022-02-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+35            CA  Denied Then Paid  No Prior Auth  2022-07-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+36            OH  Denied Then Paid  No Prior Auth  2022-02-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+37            NY  Denied Then Paid  No Prior Auth  2022-03-02 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+38            NY  Denied Then Paid  No Prior Auth  2022-07-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+39            NY  Denied Then Paid  No Prior Auth  2022-03-02 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+40            NY  Denied Then Paid  No Prior Auth  2023-02-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+41            NV  Denied Then Paid  No Prior Auth  2023-02-01 00:00:00    RKRNL0  ...              Test                 12345                   12345                      12345  12345
+42            OH  Denied Then Paid    Missing Doc  2023-04-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+43            OH  Denied Then Paid    Missing Doc  2023-05-01 00:00:00    R22080  ...              Test                 12345                   12345                      12345  12345
+44            OH  Denied Then Paid    Missing Doc  2023-05-01 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+45            NY  Denied Then Paid  No Prior Auth  2022-11-02 00:00:00    RMCKJS  ...              Test                 12345                   12345                      12345  12345
+
+[46 rows x 14 columns]
+2023-08-28 21:15:32 [INFO] Executed in: 0.010007381439208984s
