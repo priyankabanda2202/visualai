@@ -18,6 +18,7 @@ uvicorn
 pandas
 numpy
 nltk
+spacy
 msal==1.22.0
 jsonpatch==1.32
 jsonpickle==3.0.1
@@ -25,3 +26,4 @@ jsonpointer==2.3
 jsonschema==4.16.0
 pandasai
 mysql-connector-python
+pip-system-certs

@@ -1,11 +1,19 @@
 import openai
 import os
 import patch
+from dotenv import load_dotenv
+from difflib import SequenceMatcher
 from langchain import PromptTemplate, LLMChain
 from langchain.chat_models import ChatOpenAI
-os.environ["REQUESTS_CA_BUNDLE"] = 'root.pem' #Download root.pem from this page and pass it to your code.
-openai.api_key = 'LLMal64985FRoGa-/@GLD' #Personalized secured tokenID
-openai.api_base = "https://perf-dsmbrsvc.anthem.com/llmgateway/openai" #LLM Gateway designated baseurl.pass the URL as it is.
+load_dotenv()
+os.environ["REQUESTS_CA_BUNDLE"] = os.environ['openai.api_requests_ca_bundles']
+os.environ['OPENAI_API_KEY']=openai.api_key = os.environ['openai.api_key']
+openai.api_base = os.environ['openai.api_base']
+
+
+# os.environ["REQUESTS_CA_BUNDLE"] = 'root.pem' #Download root.pem from this page and pass it to your code.
+# openai.api_key = 'LLMal64985FRoGa-/@GLD' #Personalized secured tokenID
+# openai.api_base = "https://perf-dsmbrsvc.anthem.com/llmgateway/openai" #LLM Gateway designated baseurl.pass the URL as it is.
 
 os.environ['OPENAI_API_KEY'] = 'LLMal64985FRoGa-/@GLD' 
 
@@ -130,10 +138,11 @@ graph_attributes_dict = {
     # Chart 10:
     "LOB" : {
         "SQL_Query" :  '''
-SELECT  COUNT(*) as COUNT_Number_of_Total_Claims, fncl_mbu_lvl_5_desc_ori * 100 / t.s AS `%_of_claims`
+SELECT  fncl_mbu_lvl_5_desc_ori, 
+COUNT(Clm_Nbr),
+zone_desc_ori 
 FROM claimsDeepDive
-CROSS JOIN (SELECT SUM(fncl_mbu_lvl_5_desc_ori) AS s FROM claimsDeepDive) t
-group by zone_desc_ori;
+group by fncl_mbu_lvl_5_desc_ori, zone_desc_ori;
 '''
     },
     # Chart 11:
@@ -174,13 +183,13 @@ GROUP BY Adj_Reason;
         "input_variables" : ["Table","question","Columns"],
     },
     # Chart 16:
-    "Trend_Analysis_Claims_Volumns" : {
+    "Trend_Analysis_Claims_Volumes" : {
         "SQL_Query" :  """SELECT claim_completion_month_adj,
 SUM(intrst_amt_adj),    
 SUM(IF(claimsDeepDive.prompt_pay_adj = 'Yes',1,0)) AS Prompt_pay_claims,     
-SUM(IF(claimsDeepDive.prmpt_pay_clm_rcvd_dt_adj = claimsDeepDive.clm_rcvd_dt_adj,1,NULL)) AS Claims_LPP_Error_Amt,     
-SUM(IF(claimsDeepDive.prmpt_pay_clm_rcvd_dt_adj != claimsDeepDive.clm_rcvd_dt_adj, 1,NULL)) AS Claims_LPP_Correct_Amt,     
-COUNT(*) as Number_of_Total_Claims     
+SUM(IF(claimsDeepDive.prmpt_pay_clm_rcvd_dt_adj = claimsDeepDive.clm_rcvd_dt_adj,Clm_Nbr,NULL)) AS Claims_LPP_Error_Amt,     
+SUM(IF(claimsDeepDive.prmpt_pay_clm_rcvd_dt_adj != claimsDeepDive.clm_rcvd_dt_adj, Clm_Nbr,NULL)) AS Claims_LPP_Correct_Amt,     
+COUNT(Clm_Nbr) as Number_of_Total_Claims     
 FROM claimsDeepDive      
 GROUP BY claim_completion_month_adj"""
     },
@@ -200,12 +209,35 @@ GROUP BY claim_completion_month_adj"""
     }    
 }
 
-def get_graphname(query):
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()
+
+def graph_name_script(query):
+    print("query in grpah_name_script:",query)    
+    dict_graphname={"population_volume":"Population_Volume","provider_status":"Provider_Status","funding_id":"Funding_ID","lpp_claims":"LPP_Claims","prompt_pay":"Prompt_Pay","state":"State","provider":"Provider","group":"Group","subgroup":"SubGroup"," lob ":"LOB","member":"Member","adj_reason":"Adj_Reason","trend_analysis_claims_volumes":"Trend_Analysis_Claims_Volumes","trend analysis amounts":"Trend_Analysis_Amounts","lpp trend analysisamounts":"LPP_Trend_Analysis_Amounts"}
+    texts = ["population_volume","provider_status","funding_id","lpp_claims","prompt_pay","state","provider","group","subgroup"," lob ","member","adj_reason","trend_analysis_claims_volumes","trend analysis amounts","lpp trend analysisamounts"]
+    
+    keyword  = query
+    
+    l1=[]
+    l2=[]
+    for i in range(len(texts)): 
+        l1.append(similar(keyword,texts[i]))
+        l2.append(texts[i])
+    dic1=dict(zip(l2,l1))
+    intermediate_graph_name=max(dic1, key = dic1.get)
+    graph_name_by_script=dict_graphname[intermediate_graph_name]
+    print(graph_name_by_script)
+    return graph_name_by_script
+    
+    
+
+def get_graphname_llm(query):
+    print("my query is::: ",query)
 
     template = """
     What is the intent of the following input {query},
-
-    Give your answer as a single word from the below intent list else answer should be None \
+    Give your answer as a single word ,only from the below intent list else answer should be None,if you find LPP put it into LPP_Trend_Analysis_Amounts or LPP_Claims\
     Population_Volume \
     Provider_Status \
     Funding_ID \
@@ -220,11 +252,10 @@ def get_graphname(query):
     Adj_Reason \
     Top_10_Procedure_Codes \
     Top_10_Revenue_Codes \
-    Top_10_Diagnosis_Codes \
+    Top_10_Diagnosis_Codes\
     Trend_Analysis_Claims_Volumes \
     Trend_Analysis_Amounts \
     LPP_Trend_Analysis_Amounts
-
     """
 
     prompt = PromptTemplate(template=template, input_variables=["query"])
@@ -233,9 +264,33 @@ def get_graphname(query):
     llm_chain = LLMChain(prompt=prompt, 
                             llm=llm
                             )
-    response= llm_chain.run({"query":query})
-    # print(response)
-    return response
+    response_by_llm= llm_chain.run({"query":query})
+    print( "hi i am in get graphname block",response_by_llm)
+    return response_by_llm
+
+def get_final_graphname(response_by_llm,graph_name_by_script):
+    if (response_by_llm!="None" and graph_name_by_script!= "None"):
+        if response_by_llm == graph_name_by_script:
+            return response_by_llm
+        elif response_by_llm != graph_name_by_script:
+            if response_by_llm in ["Population_Volume","Trend_Analysis_Claims_Volumes","Trend_Analysis_Amounts","LPP_Trend_Analysis_Amounts","LPP_Claims.","LPP_Claims"]:
+                return graph_name_by_script
+            # else:
+            #     return response_by_llm
+    else:
+        if response_by_llm == "None":
+            return graph_name_by_script
+        elif graph_name_by_script == "None":
+            return response_by_llm
+
+def get_graphname(query):
+    response_by_llm=get_graphname_llm(query)
+    print("response_by_llm:",response_by_llm)
+    graph_name_by_script=graph_name_script(query)
+    print("graph_name_by_script:",graph_name_by_script)
+    final_graphname=get_final_graphname(response_by_llm,graph_name_by_script)
+    return final_graphname
+
 
 def replace_newline(str):
     str = str.replace("\n", " ")
@@ -253,7 +308,7 @@ def get_graph_attributes(graph_name):
 
 def get_sql_query(user_prompt, filter):
     graph_name = get_graphname(user_prompt)
-    #print(graph_name)
+    print("hi i am in the get_sql_query",graph_name)
        
     if graph_name == "None":
         return "Invalid input"
@@ -270,7 +325,7 @@ def get_sql_query(user_prompt, filter):
                             llm=llm
                             )
 
-            question = f"Query the count of {Columns}"
+            question = f"Query the count of {Columns}";
             question2 = f"Query the date and sum of {Columns}"
             
             if graph_name == "Trend_Analysis_Amounts": 
@@ -279,20 +334,17 @@ def get_sql_query(user_prompt, filter):
             else:
                 input_parameters = {"Table" : Table,"question" :question, "Columns" : Columns, "graph_name":graph_name}   
             response= llm_chain.run(input_parameters)
-            intercept_resp = response.split("GROUP")         
-            # print(filterKeys[0], "++++++++++++filterKeys")
+            intercept_resp = replace_newline(response).strip().split("GROUP")
             try:
                 filterKeys = list(filter.keys())
                 updated_query = intercept_resp[0]+'where '+filterKeys[0]+' IN ('+filter[filterKeys[0]].strip("")+') GROUP'+intercept_resp[1]
             except:
                 updated_query = llm_chain.run(input_parameters)
-            
-            # print(intercept_resp[0]+'where '+filterKeys[0]+' IN ('+filter[filterKeys[0]].strip("")+') GROUP'+intercept_resp[1], "----------response")
             return(replace_newline(updated_query).strip()),Table,graph_name
         else:
             Table="claimsDeepDive"
             sql_query = graph_attributes_dict[graph_name]["SQL_Query"];
-            intercept_resp = sql_query.split("Group")
+            intercept_resp = replace_newline(sql_query).strip().split("Group")
             # print(intercept_resp[0], "intercept_resp +++++++++++")
             try:
                 filterKeys = list(filter.keys())
@@ -300,4 +352,4 @@ def get_sql_query(user_prompt, filter):
             except:
                 updated_query = graph_attributes_dict[graph_name]["SQL_Query"]
             # print(sql_query, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! sql_query")
-            return(replace_newline(updated_query).strip()),Table,graph_name
+            return(updated_query),Table,graph_name

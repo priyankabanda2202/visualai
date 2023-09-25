@@ -28,7 +28,7 @@ def replace_line(file_name):
     out.close()
 
 def monkey_patch():
-    print("Entered monkey patching") 
+    print("Entered  patching") 
     path=chat_models.__path__[0]
     for dirpath, dirnames, filenames in os.walk(path):
         for file in filenames:        
