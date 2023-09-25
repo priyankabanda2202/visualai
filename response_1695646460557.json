@@ -1,0 +1,37 @@
+{
+  "response_desc": "Trend_Analysis_Amounts",
+  "response_data": {
+    "metrics": [
+      {
+        "paid amt adj sum": 0,
+        "totl chrg amt adj sum": 96860,
+        "intrst amt adj sum": 0,
+        "claim completion month adj": "August"
+      },
+      {
+        "paid amt adj sum": 7585800,
+        "totl chrg amt adj sum": 392330933,
+        "intrst amt adj sum": 0,
+        "claim completion month adj": "July"
+      },
+      {
+        "paid amt adj sum": 2418871,
+        "totl chrg amt adj sum": 612506382,
+        "intrst amt adj sum": 0,
+        "claim completion month adj": "June"
+      },
+      {
+        "paid amt adj sum": 10650350,
+        "totl chrg amt adj sum": 300507302,
+        "intrst amt adj sum": 0,
+        "claim completion month adj": "May"
+      }
+    ],
+    "insights": "The trend analysis shows an increase in claims volume and amounts for the months of May, June, and July. However, August has no claims paid and only a small number of claims submitted. The total charged amount is significantly higher than the paid amount, and there were no interest charges. The data indicates that there may be a problem with claim processing in August.",
+    "variables": [
+      "paid amt adj sum",
+      "totl chrg amt adj sum",
+      "intrst amt adj sum"
+    ]
+  }
+}
