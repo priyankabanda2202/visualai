@@ -12,7 +12,7 @@ import mysql.connector
 # from querypreprocessing import query_preprocessing
 from querypreprocessing import query_preprocessing
 
-connection = mysql.connector.connect(user='root', password='Mysql@123', host='10.189.108.243', database='visualai')
+connection = mysql.connector.connect(user='root', password='Mysql@123', host='10.189.108.25', database='visualai')
 # patch.monkey_patch()
 #patch.replace_line(file, 362, '        for res in eval(response)["choices"]:\n')
 #patch.replace_line(file, 369, '        token_usage = eval(response).get("usage", {})\n')

@@ -111,6 +111,13 @@ def graph_generator(result,graph_name):
         print(graph_name)
         text=graph_name
         data_insight = get_insight(result, text)
+        result_list=list(result.columns)
+        print("result_list:",result_list)
+        index_list = [0,1]
+        result_list = [result_list[i] for i in index_list]
+        variables = []
+        for i in result_list:
+            variables.append(i.replace("_", " "))
         l1=[]
         l1.append(graph_name)
         dict2={k:dict1[k] for k in l1 if k in dict1}
@@ -178,9 +185,11 @@ def graph_generator(result,graph_name):
                       }
                         temp_list.append(dic)
                         #print(temp_list)
-                        #print("all",temp_list)
+                        print("all",temp_list)
+                        print("text:",text,"variables:",variables,"data_insight:",data_insight)
                     try:
-                        #print("Response1")
+                        print("Response1")
+                        
                         response = {
                               "response_desc":text,
                               "response_data":{

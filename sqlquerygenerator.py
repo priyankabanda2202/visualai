@@ -237,7 +237,7 @@ def get_graphname_llm(query):
 
     template = """
     What is the intent of the following input {query},
-    Give your answer as a single word ,only from the below intent list else answer should be None,if you find LPP put it into LPP_Trend_Analysis_Amounts or LPP_Claims\
+    Give your answer as a single word ,only from the below intent list else answer should be None\
     Population_Volume \
     Provider_Status \
     Funding_ID \
@@ -269,14 +269,15 @@ def get_graphname_llm(query):
     return response_by_llm
 
 def get_final_graphname(response_by_llm,graph_name_by_script):
+    print("responsesin the final graphname block:","response_by_llm:",response_by_llm,"graph_name_by_script:",graph_name_by_script)
     if (response_by_llm!="None" and graph_name_by_script!= "None"):
         if response_by_llm == graph_name_by_script:
             return response_by_llm
         elif response_by_llm != graph_name_by_script:
             if response_by_llm in ["Population_Volume","Trend_Analysis_Claims_Volumes","Trend_Analysis_Amounts","LPP_Trend_Analysis_Amounts","LPP_Claims.","LPP_Claims"]:
                 return graph_name_by_script
-            # else:
-            #     return response_by_llm
+            else:
+                return response_by_llm
     else:
         if response_by_llm == "None":
             return graph_name_by_script
@@ -285,9 +286,9 @@ def get_final_graphname(response_by_llm,graph_name_by_script):
 
 def get_graphname(query):
     response_by_llm=get_graphname_llm(query)
-    print("response_by_llm:",response_by_llm)
+    print("response_by_llm:",response_by_llm,"_________________")
     graph_name_by_script=graph_name_script(query)
-    print("graph_name_by_script:",graph_name_by_script)
+    print("graph_name_by_script:",graph_name_by_script,"__________")
     final_graphname=get_final_graphname(response_by_llm,graph_name_by_script)
     return final_graphname
 

@@ -1,0 +1,33 @@
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host pypi.python.org pandas
+
+python -m uvicorn main:app
+
+BITBUCKET/GIT SaME:
+
+GIT_SSL_NO_VERIFY=true git clone https://AL59273@bitbucket.elevancehealth.com/scm/icouncil/ic_visualai_dataprocessing_service.git ---for develop branch
+
+
+
+GIT_SSL_NO_VERIFY=true git clone -b feature/graphbugfixes https://AL59273@bitbucket.elevancehealth.com/scm/icouncil/ic_visualai_dataprocessing_service.git---for feature branch
+
+GIT_SSL_NO_VERIFY=true git fetch && git checkout latestwith16and10andenvfile-----to copy from develop and push into another feature branch
+modify any file and then to push the modified changes :
+redirect to that folder and 
+git status
+git add those modified files
+git commit -m "comment for the changes"
+git push /GIT_SSL_NO_VERIFY=true------- git push
+
+GIT_SSL_NO_VERIFY=true git push -------when working on feature branch and when want to add to that
+
+
+git push origin main
+
+git push -u origin feature/graphbugfixes----for any feature branch
+
+-------done--------
+
+
+
+
+rundll32 sysdm.cpl,EditEnvironmentVariables
