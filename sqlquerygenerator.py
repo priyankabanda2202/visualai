@@ -15,7 +15,7 @@ openai.api_base = os.environ['openai.api_base']
 # openai.api_key = 'LLMal64985FRoGa-/@GLD' #Personalized secured tokenID
 # openai.api_base = "https://perf-dsmbrsvc.anthem.com/llmgateway/openai" #LLM Gateway designated baseurl.pass the URL as it is.
 
-os.environ['OPENAI_API_KEY'] = 'LLMal64985FRoGa-/@GLD' 
+#os.environ['OPENAI_API_KEY']=openai.api_key = os.environ['openai.api_key'] 
 
 llm = ChatOpenAI(model_name="gpt3", temperature = 0)
 # patch.monkey_patch()
@@ -214,8 +214,8 @@ def similar(a, b):
 
 def graph_name_script(query):
     print("query in grpah_name_script:",query)    
-    dict_graphname={"population_volume":"Population_Volume","provider_status":"Provider_Status","funding_id":"Funding_ID","lpp_claims":"LPP_Claims","prompt_pay":"Prompt_Pay","state":"State","provider":"Provider","group":"Group","subgroup":"SubGroup"," lob ":"LOB","member":"Member","adj_reason":"Adj_Reason","trend_analysis_claims_volumes":"Trend_Analysis_Claims_Volumes","trend analysis amounts":"Trend_Analysis_Amounts","lpp trend analysisamounts":"LPP_Trend_Analysis_Amounts"}
-    texts = ["population_volume","provider_status","funding_id","lpp_claims","prompt_pay","state","provider","group","subgroup"," lob ","member","adj_reason","trend_analysis_claims_volumes","trend analysis amounts","lpp trend analysisamounts"]
+    dict_graphname={"population_volume":"Population_Volume","provider_status":"Provider_Status","funding_id":"Funding_ID","lpp_claims":"LPP_Claims","prompt_pay":"Prompt_Pay","state":"State","provider":"Provider"," group ":"Group","subgroup":"SubGroup"," lob ":"LOB","member":"Member","adj_reason":"Adj_Reason","trend_analysis_claims_volumes":"Trend_Analysis_Claims_Volumes","trend analysis amounts":"Trend_Analysis_Amounts","lpp trend analysisamounts":"LPP_Trend_Analysis_Amounts"}
+    texts = ["population_volume","provider_status","funding_id","lpp_claims","prompt_pay","state","provider"," group ","subgroup"," lob ","member","adj_reason","trend_analysis_claims_volumes","trend analysis amounts","lpp trend analysisamounts"]
     
     keyword  = query
     
