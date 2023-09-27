@@ -30,4 +30,8 @@ git push -u origin feature/graphbugfixes----for any feature branch
 
 
 
-rundll32 sysdm.cpl,EditEnvironmentVariables
+rundll32 sysdm.cpl,EditEnvironmentVariables------to directly edit syatem variables
+
+
+
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --user-data-dir="C://chrome-dev-disabled-security" --disable-web-security --disable-site-isolation-trials-----to access the no cost browser services
