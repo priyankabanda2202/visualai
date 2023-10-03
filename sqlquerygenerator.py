@@ -337,8 +337,31 @@ def get_sql_query(user_prompt, filter):
             response= llm_chain.run(input_parameters)
             intercept_resp = replace_newline(response).strip().split("GROUP")
             try:
+                print("intercept_resp in get sql query:",intercept_resp)
                 filterKeys = list(filter.keys())
-                updated_query = intercept_resp[0]+'where '+filterKeys[0]+' IN ('+filter[filterKeys[0]].strip("")+') GROUP'+intercept_resp[1]
+                print("filterKeys in get sql query:",filterKeys)
+                print("")
+                print("filter[filterKeys[0]]:",filter[filterKeys[0]])
+                print("filter[filterKeys[0]].strip(""):",filter[filterKeys[0]].strip(""))
+                l=''
+                s=intercept_resp[0]+' where '
+                e=' GROUP' +intercept_resp[1]
+                for i in range(len(filterKeys)):
+
+    
+                    intermediate_query = filterKeys[i]+' IN ('+filter[filterKeys[i]].strip("") +')' + ' and '
+                    i+=1
+                    l=l+intermediate_query
+                l=l[:-4]
+                updated_query=s+l+e
+                print(updated_query)
+                # for i in range(len(filterKeys)):
+                    
+                    # updated_query = intercept_resp[0]+'where '+filterKeys[0]+' IN ('+filter[filterKeys[0]].strip("") +')' + ' and '+filterKeys[1] + ' IN ('+filter[filterKeys[1]].strip("")+') ' + ' and '+filterKeys[2] + ' IN ('+filter[filterKeys[2]].strip("")+') GROUP' +intercept_resp[1]
+
+
+                #updated_query = intercept_resp[0]+'where '+filterKeys[0]+' IN ('+filter[filterKeys[0]].strip("") +')' + ' and '+filterKeys[1] + ' IN ('+filter[filterKeys[1]].strip("")+') ' + ' and '+filterKeys[2] + ' IN ('+filter[filterKeys[2]].strip("")+') GROUP' +intercept_resp[1]
+                print("updated_query in get sql query:",updated_query)
             except:
                 updated_query = llm_chain.run(input_parameters)
             return(replace_newline(updated_query).strip()),Table,graph_name
