@@ -1,0 +1,30 @@
+2023-10-04 19:17:35,982 - root - INFO - Entered the Patching
+2023-10-04 19:17:36,032 - root - INFO - Entered the Patching
+2023-10-04 19:17:36,843 - root - INFO - Entered the Patching
+2023-10-04 19:17:37,154 - root - INFO - Entered the Patching
+2023-10-04 19:17:37,392 - root - INFO - Entered the Patching
+2023-10-04 19:17:38,390 - root - INFO - Entered the Patching
+2023-10-04 19:17:39,028 - root - INFO - Entered the Patching
+2023-10-04 19:17:39,560 - root - INFO - Entered the Patching
+2023-10-04 19:18:33,424 - root - INFO - Hey, I am printing the query, population volume
+2023-10-04 19:18:33,425 - root - INFO - Query entered in LLM: {query}
+2023-10-04 19:18:36,211 - root - INFO - Responses in the final graphname function: Response by llm --> None
+2023-10-04 19:18:36,211 - root - INFO - query in Graph name script: population volume
+2023-10-04 19:18:36,212 - root - INFO - Graph name by the script: Population_Volume
+2023-10-04 19:18:36,212 - root - INFO - Responses in the final graphname function: graph_name_by_script --> Population_Volume
+2023-10-04 19:18:36,212 - root - INFO - Responses in the final graphname function: Response by llm --> None
+2023-10-04 19:18:36,212 - root - INFO - Responses in the final graphname function: graph_name_by_script --> Population_Volume
+2023-10-04 19:18:36,212 - root - INFO - Entered the Get Sql query --> Population_Volume
+2023-10-04 19:18:39,477 - root - INFO - Entered the elif block in Graph generator block: Population_Volume
+2023-10-04 19:18:43,230 - root - INFO - Results in Graph generator block: ['clm_its_host_cd_ori', 'count']
+2023-10-04 19:19:11,560 - root - INFO - Starting long operation
+2023-10-04 19:19:11,578 - root - INFO - Query entered in LLM: {query}
+2023-10-04 19:19:13,358 - root - INFO - Responses in the final graphname function: Response by llm --> None
+2023-10-04 19:19:13,358 - root - INFO - query in Graph name script: population volume
+2023-10-04 19:19:13,359 - root - INFO - Graph name by the script: Population_Volume
+2023-10-04 19:19:13,360 - root - INFO - Responses in the final graphname function: graph_name_by_script --> Population_Volume
+2023-10-04 19:19:13,360 - root - INFO - Responses in the final graphname function: Response by llm --> None
+2023-10-04 19:19:13,360 - root - INFO - Responses in the final graphname function: graph_name_by_script --> Population_Volume
+2023-10-04 19:19:13,360 - root - INFO - Entered the Get Sql query --> Population_Volume
+2023-10-04 19:19:15,446 - root - INFO - Entered the elif block in Graph generator block: Population_Volume
+2023-10-04 19:19:18,713 - root - INFO - Results in Graph generator block: ['clm_its_host_cd_ori', 'count']

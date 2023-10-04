@@ -1,0 +1,10 @@
+uvicorn:
+  workers: 8 # number of worker processes
+  threads: 4 # number of threads per worker process
+  timeout: 60 # seconds before a request times out
+  max_requests: 1000 # maximum number of requests to handle concurrently
+  debug: true # enable debugging mode
+  # host: 127.0.0.1
+  # port: 8000
+  reload: true
+  timeout_keep_alive : 5
