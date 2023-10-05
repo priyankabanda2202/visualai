@@ -70,6 +70,8 @@ def graph_generator(result,GraphName):
     
                 # print("Hi i am in O>1")
                 count_group = result.groupby([flag,value[0],value[1]],as_index = False).size()
+                      #count_group = pd.DataFrame(count_group, columns = ['size'], index=count_group.index)
+                    #count_group=count_group.reset_index(inplace=True)
     
                 value0 = count_group[value[0]].tolist()
                 COUNT = count_group[flag].tolist()
